@@ -134,9 +134,13 @@ img { max-width: 100%; height: auto; }
 .hero {
   text-align: center;
   padding: 72px 24px 56px;
-  max-width: 720px;
-  margin: 0 auto;
   background: linear-gradient(180deg, rgba(123,171,142,0.06) 0%, transparent 100%);
+}
+.hero h1,
+.hero .subtitle {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-label {
   display: inline-block;
@@ -825,7 +829,7 @@ img { max-width: 100%; height: auto; }
 
 /* ===== KP Illustration Wrapper ===== */
 .kp-illustration {
-  margin: 16px 0;
+  margin: 16px auto;
   text-align: center;
   max-width: 520px;
 }
