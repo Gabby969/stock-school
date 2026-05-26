@@ -89,6 +89,14 @@ const ShareSchool = {
         icon.innerHTML = '';
       }
     });
+
+    // 更新侧边栏底部进度条
+    const totalItems = document.querySelectorAll('.sidebar-item[data-kp]').length;
+    const doneCount = readKps.length;
+    const countEl = document.querySelector('.sidebar-done-count');
+    const fillEl = document.querySelector('.sidebar-progress-fill');
+    if (countEl) countEl.textContent = doneCount;
+    if (fillEl) fillEl.style.width = (totalItems ? (doneCount / totalItems) * 100 : 0) + '%';
   },
 
   // Update nav progress bar

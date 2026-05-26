@@ -193,6 +193,15 @@ img { max-width: 100%; height: auto; }
   color: var(--text-dim);
   margin-top: 14px;
 }
+.hero-scroll-hint {
+  margin-top: 32px;
+  color: var(--text-dim);
+  animation: bounce-down 2s ease infinite;
+}
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(6px); opacity: 0.8; }
+}
 
 /* ===== Benefits Section ===== */
 .benefits-section {
@@ -387,6 +396,8 @@ img { max-width: 100%; height: auto; }
   top: 56px;
   height: calc(100vh - 56px);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 .sidebar-title {
   padding: 0 20px 16px;
@@ -429,6 +440,30 @@ img { max-width: 100%; height: auto; }
 .sidebar-icon.pending { border: 2px solid var(--text-dim); }
 .sidebar-icon.done { background: var(--green); color: #fff; }
 .sidebar-icon.active-icon { background: var(--accent); color: #fff; }
+
+.sidebar-progress {
+  margin-top: auto;
+  padding: 16px 20px 4px;
+  border-top: 1px solid var(--border);
+}
+.sidebar-progress-text {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.sidebar-progress-track {
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sidebar-progress-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
 
 /* Module Content Area */
 .module-content {
@@ -724,12 +759,24 @@ img { max-width: 100%; height: auto; }
 /* ===== Module Complete Summary ===== */
 .module-complete {
   display: none;
-  background: var(--bg2);
-  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(46,170,110,0.06), rgba(91,143,217,0.06));
+  border: 2px solid var(--green);
   border-radius: var(--radius);
-  padding: 40px 28px;
+  padding: 48px 32px;
   margin-top: 48px;
   text-align: center;
+}
+.complete-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 .module-complete h2 {
   font-size: 24px;
@@ -738,9 +785,19 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 8px;
 }
 .module-complete .complete-score {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+.module-complete .complete-message {
+  font-size: 15px;
   color: var(--text);
   margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 /* ===== Think First Component ===== */
@@ -1119,6 +1176,18 @@ img { max-width: 100%; height: auto; }
   .sidebar-title { display: none; }
   .sidebar-section-label { display: none; }
   .sidebar-item { white-space: nowrap; padding: 8px 14px; }
+  .sidebar-progress { display: none; }
+  .module-sidebar::after {
+    content: '';
+    position: sticky;
+    right: 0;
+    top: 0;
+    min-width: 32px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--bg2));
+    pointer-events: none;
+    flex-shrink: 0;
+  }
   .module-content {
     padding: 24px 16px;
     max-width: 100%;
