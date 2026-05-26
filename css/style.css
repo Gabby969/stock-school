@@ -23,6 +23,15 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.2s ease;
+  /* Warm module accent palette */
+  --m1: #7bab8e; /* sage — fresh start */
+  --m2: #7ba3cc; /* soft blue — analytical */
+  --m3: #c98a6e; /* terracotta — hands-on */
+  --m4: #b8943f; /* amber — charts */
+  --m5: #5ea3a0; /* teal — balance */
+  --m6: #b87d8a; /* dusty rose — careful */
+  --m7: #8e85b8; /* lavender — psychology */
+  --m8: #5d9678; /* deep sage — completion */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -127,12 +136,13 @@ img { max-width: 100%; height: auto; }
   padding: 72px 24px 56px;
   max-width: 720px;
   margin: 0 auto;
+  background: linear-gradient(180deg, rgba(123,171,142,0.06) 0%, transparent 100%);
 }
 .hero-label {
   display: inline-block;
   padding: 5px 16px;
-  background: rgba(91,143,217,0.1);
-  color: var(--accent);
+  background: rgba(123,171,142,0.12);
+  color: var(--m8);
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
@@ -207,9 +217,9 @@ img { max-width: 100%; height: auto; }
   justify-content: center;
   margin-bottom: 18px;
 }
-.benefit-icon-blue { background: rgba(91,143,217,0.1); color: var(--accent); }
-.benefit-icon-green { background: rgba(46,170,110,0.1); color: var(--green); }
-.benefit-icon-gold { background: rgba(212,147,13,0.1); color: var(--star); }
+.benefit-icon-blue { background: rgba(123,171,142,0.12); color: var(--m1); }
+.benefit-icon-green { background: rgba(94,163,160,0.12); color: var(--m5); }
+.benefit-icon-gold { background: rgba(201,138,110,0.12); color: var(--m3); }
 .benefit-card h3 {
   font-size: 17px;
   font-weight: 700;
@@ -269,6 +279,7 @@ img { max-width: 100%; height: auto; }
 .module-card {
   background: var(--bg2);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
   transition: box-shadow var(--transition), transform var(--transition);
@@ -284,6 +295,23 @@ img { max-width: 100%; height: auto; }
   text-decoration: none;
   color: inherit;
 }
+/* Per-module accent colors */
+.module-card[data-module="m1"] { border-top-color: var(--m1); }
+.module-card[data-module="m2"] { border-top-color: var(--m2); }
+.module-card[data-module="m3"] { border-top-color: var(--m3); }
+.module-card[data-module="m4"] { border-top-color: var(--m4); }
+.module-card[data-module="m5"] { border-top-color: var(--m5); }
+.module-card[data-module="m6"] { border-top-color: var(--m6); }
+.module-card[data-module="m7"] { border-top-color: var(--m7); }
+.module-card[data-module="m8"] { border-top-color: var(--m8); }
+.module-card[data-module="m1"] .card-num { color: var(--m1); }
+.module-card[data-module="m2"] .card-num { color: var(--m2); }
+.module-card[data-module="m3"] .card-num { color: var(--m3); }
+.module-card[data-module="m4"] .card-num { color: var(--m4); }
+.module-card[data-module="m5"] .card-num { color: var(--m5); }
+.module-card[data-module="m6"] .card-num { color: var(--m6); }
+.module-card[data-module="m7"] .card-num { color: var(--m7); }
+.module-card[data-module="m8"] .card-num { color: var(--m8); }
 .module-card .card-num {
   font-size: 13px;
   font-weight: 700;
