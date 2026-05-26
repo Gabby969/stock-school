@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Buy Stocks: Market Orders, Limit Orders Explained — Stock School</title>
+  <meta name="description" content="Learn market orders vs limit orders, stock trading hours, bid-ask spread, and how to buy your first stock step by step. Simple guide for beginners.">
+  <link rel="canonical" href="https://stockschool.site/modules/how-trading-works.html">
+  <meta property="og:title" content="How to Buy Stocks: Market Orders, Limit Orders Explained — Stock School">
+  <meta property="og:description" content="Market orders vs limit orders, trading hours, bid-ask spread, and how to buy your first stock step by step.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockschool.site/modules/how-trading-works.html">
+  <meta property="og:image" content="https://stockschool.site/assets/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://stockschool.site/modules/how-trading-works.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between a market order and a limit order?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A market order buys or sells immediately at the current best available price — it guarantees execution but not price. A limit order lets you set a maximum buy price or minimum sell price — it guarantees price but not execution, since the trade only happens if the market reaches your price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are US stock market trading hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Regular US stock market hours are 9:30 AM to 4:00 PM Eastern Time, Monday through Friday. Pre-market trading runs from 4:00 AM to 9:30 AM, and after-hours trading runs from 4:00 PM to 8:00 PM. For Beijing time, regular hours are 9:30 PM to 4:00 AM the next day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the bid-ask spread?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The bid-ask spread is the gap between the highest price buyers are willing to pay (bid) and the lowest price sellers will accept (ask). This spread is a hidden cost of trading. Highly liquid stocks like Apple have tiny spreads of about $0.01, while smaller stocks can have spreads of $0.50 or more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does T+1 settlement mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "T+1 settlement means that after you buy or sell a stock (the trade date T), the legal transfer of ownership and money officially completes one business day later. You can see the shares in your account immediately, but the behind-the-scenes settlement takes an extra day. This rarely matters for long-term investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much money should I save before investing in stocks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Before investing any money in stocks, you should have an emergency fund covering 3 to 6 months of living expenses in a safe, liquid account. Only invest money you won't need for at least 3 to 5 years, since the stock market can drop significantly in the short term."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Stock<span>School</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Modules</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+    <div class="nav-progress">
+      <span class="nav-progress-text">0/8 completed</span>
+      <div class="nav-progress-track">
+        <div class="nav-progress-fill"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Module Layout -->
+<div class="module-layout">
+  <!-- Sidebar -->
+  <aside class="module-sidebar">
+    <div class="sidebar-title">Module 3</div>
+    <a class="sidebar-item" data-kp="kp-orders"><span class="sidebar-icon pending"></span>Order Types</a>
+    <a class="sidebar-item" data-kp="kp-hours"><span class="sidebar-icon pending"></span>Trading Hours</a>
+    <a class="sidebar-item" data-kp="kp-howto"><span class="sidebar-icon pending"></span>How to Buy a Stock</a>
+    <a class="sidebar-item" data-kp="kp-spread"><span class="sidebar-icon pending"></span>Bid-Ask Spread</a>
+    <a class="sidebar-item" data-kp="kp-settlement"><span class="sidebar-icon pending"></span>Settlement (T+1)</a>
+    <a class="sidebar-item" data-kp="kp-emergency"><span class="sidebar-icon pending"></span>Emergency Fund First</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="module-content">
+    <h1>How Trading Works</h1>
+    <div class="module-meta">
+      <span>Module 3 of 8</span>
+      <span>6 concepts</span>
+      <span>~15 min read</span>
+    </div>
+
+    <!-- KP 1: Market Order vs Limit Order vs Stop Order -->
+    <article class="kp-card" id="kp-orders">
+      <h2>Market Order vs Limit Order vs Stop Order</h2>
+      <p>There are three main ways to tell your broker to buy or sell a stock. Each one makes a different trade-off between <strong>speed</strong> and <strong>price control</strong>.</p>
+
+      <svg width="100%" height="220" viewBox="0 0 540 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Three order types: market order executes immediately, limit order sets a price, stop order triggers automatically">
+        <!-- Market Order -->
+        <rect x="10" y="10" width="160" height="190" rx="10" fill="rgba(46,170,110,0.06)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <circle cx="90" cy="50" r="22" fill="rgba(46,170,110,0.12)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <path d="M80 50 L90 40 L100 50" stroke="#2eaa6e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="90" y1="40" x2="90" y2="62" stroke="#2eaa6e" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="90" y="92" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">Market Order</text>
+        <text x="90" y="112" text-anchor="middle" font-size="11" fill="#4a4543">"Buy NOW at</text>
+        <text x="90" y="126" text-anchor="middle" font-size="11" fill="#4a4543">whatever price"</text>
+        <line x1="40" y1="140" x2="140" y2="140" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="90" y="158" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Guarantees execution</text>
+        <text x="90" y="174" text-anchor="middle" font-size="10" fill="#e05c5c">Not price</text>
+
+        <!-- Limit Order -->
+        <rect x="190" y="10" width="160" height="190" rx="10" fill="rgba(91,143,217,0.06)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <circle cx="270" cy="50" r="22" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="270" y="55" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">$X</text>
+        <text x="270" y="92" text-anchor="middle" font-size="13" fill="#5b8fd9" font-weight="700">Limit Order</text>
+        <text x="270" y="112" text-anchor="middle" font-size="11" fill="#4a4543">"Buy only at $X</text>
+        <text x="270" y="126" text-anchor="middle" font-size="11" fill="#4a4543">or better"</text>
+        <line x1="220" y1="140" x2="320" y2="140" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="270" y="158" text-anchor="middle" font-size="10" fill="#5b8fd9" font-weight="600">Guarantees price</text>
+        <text x="270" y="174" text-anchor="middle" font-size="10" fill="#e05c5c">Not execution</text>
+
+        <!-- Stop Order -->
+        <rect x="370" y="10" width="160" height="190" rx="10" fill="rgba(224,92,92,0.06)" stroke="#e05c5c" stroke-width="1.5"/>
+        <circle cx="450" cy="50" r="22" fill="rgba(224,92,92,0.1)" stroke="#e05c5c" stroke-width="1.5"/>
+        <path d="M440 42 L460 42 L460 54 L440 54 Z" fill="none" stroke="#e05c5c" stroke-width="1.5"/>
+        <path d="M443 48 L457 48" stroke="#e05c5c" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M450 54 L450 62" stroke="#e05c5c" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="450" y="92" text-anchor="middle" font-size="13" fill="#e05c5c" font-weight="700">Stop Order</text>
+        <text x="450" y="112" text-anchor="middle" font-size="11" fill="#4a4543">"Sell if price</text>
+        <text x="450" y="126" text-anchor="middle" font-size="11" fill="#4a4543">drops to $X"</text>
+        <line x1="400" y1="140" x2="500" y2="140" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="450" y="158" text-anchor="middle" font-size="10" fill="#e05c5c" font-weight="600">Automatic safety net</text>
+        <text x="450" y="174" text-anchor="middle" font-size="10" fill="#a09890">Triggers a market order</text>
+      </svg>
+
+      <div class="analogy">
+        Market order = "I'll pay whatever for this concert ticket right now." Limit order = "I'll only pay $50 max for a ticket — if it's more, I'll wait." Stop order = "If the ticket value drops below $40, sell mine automatically before it gets worse."
+      </div>
+
+      <h3>When to Use Each</h3>
+      <ul>
+        <li><strong>Market order:</strong> When you want to buy or sell immediately and the stock is liquid (lots of trading volume). Good for large-cap stocks like AAPL or VOO.</li>
+        <li><strong>Limit order:</strong> When you want price control. Essential for less-liquid stocks where the price might jump. You set the max you'll pay.</li>
+        <li><strong>Stop order (stop-loss):</strong> To protect yourself from big losses. "If this stock drops to $40, sell it." It's like an automatic emergency exit.</li>
+      </ul>
+
+      <div class="key-point">
+        For most beginners buying popular ETFs like VOO or QQQ, a market order during regular hours is perfectly fine. The price you see is very close to the price you'll get. Use limit orders for smaller, less-traded stocks.
+      </div>
+    </article>
+
+    <!-- KP 2: Trading Hours -->
+    <article class="kp-card" id="kp-hours">
+      <h2>Trading Hours</h2>
+      <p>The US stock market isn't open 24/7. There are <strong>specific windows</strong> when you can trade — and the rules change depending on the session.</p>
+
+      <svg width="100%" height="200" viewBox="0 0 540 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Timeline showing pre-market, regular hours, and after-hours trading sessions">
+        <!-- Timeline base -->
+        <line x1="30" y1="80" x2="510" y2="80" stroke="#e5e0d8" stroke-width="2"/>
+
+        <!-- Pre-market -->
+        <rect x="30" y="60" width="150" height="40" rx="6" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5"/>
+        <text x="105" y="76" text-anchor="middle" font-size="10" fill="#d4930d" font-weight="600">PRE-MARKET</text>
+        <text x="105" y="92" text-anchor="middle" font-size="10" fill="#4a4543">4:00 - 9:30 AM</text>
+
+        <!-- Regular hours -->
+        <rect x="190" y="50" width="170" height="60" rx="6" fill="rgba(46,170,110,0.1)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="275" y="72" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="700">REGULAR HOURS</text>
+        <text x="275" y="90" text-anchor="middle" font-size="11" fill="#4a4543">9:30 AM - 4:00 PM</text>
+        <text x="275" y="104" text-anchor="middle" font-size="10" fill="#2eaa6e">Best time to trade</text>
+
+        <!-- After-hours -->
+        <rect x="370" y="60" width="140" height="40" rx="6" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5"/>
+        <text x="440" y="76" text-anchor="middle" font-size="10" fill="#d4930d" font-weight="600">AFTER-HOURS</text>
+        <text x="440" y="92" text-anchor="middle" font-size="10" fill="#4a4543">4:00 - 8:00 PM</text>
+
+        <!-- All times Eastern -->
+        <text x="270" y="130" text-anchor="middle" font-size="11" fill="#a09890">All times Eastern (ET)</text>
+
+        <!-- Beijing time row -->
+        <rect x="30" y="148" width="480" height="36" rx="6" fill="rgba(91,143,217,0.06)" stroke="#5b8fd9" stroke-width="1"/>
+        <text x="270" y="163" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Beijing Time: Regular hours = 9:30 PM - 4:00 AM (next day)</text>
+        <text x="270" y="178" text-anchor="middle" font-size="10" fill="#a09890">Pre-market 4:00 PM - 9:30 PM  |  After-hours 4:00 - 8:00 AM</text>
+      </svg>
+
+      <h3>Why Does This Matter?</h3>
+      <ul>
+        <li><strong>Regular hours (9:30 AM - 4:00 PM ET):</strong> This is when most trading happens. Prices are most accurate, spreads are tightest, and orders fill fastest.</li>
+        <li><strong>Pre-market (4:00 - 9:30 AM ET):</strong> Lower volume, wider spreads, and prices can swing wildly on overnight news.</li>
+        <li><strong>After-hours (4:00 - 8:00 PM ET):</strong> Same issues as pre-market. Big price moves often happen here when companies report earnings.</li>
+      </ul>
+
+      <div class="warning-box">
+        Pre-market and after-hours trading is riskier: fewer buyers and sellers means wider bid-ask spreads, more volatile price swings, and your order might not fill at the price you expect. Beginners should stick to regular hours.
+      </div>
+
+      <div class="key-point">
+        The market is closed on weekends and US holidays. If you place an order on Saturday, it won't execute until Monday at 9:30 AM ET. For Beijing time, regular hours start at 9:30 PM — a night-owl schedule.
+      </div>
+    </article>
+
+    <!-- KP 3: How to Buy a Stock Step-by-Step -->
+    <article class="kp-card" id="kp-howto">
+      <h2>How to Buy a Stock: 5 Steps</h2>
+      <p>Buying your first stock is simpler than you think. Here's the entire process from zero to "I own shares."</p>
+
+      <svg width="100%" height="200" viewBox="0 0 540 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Five steps to buy a stock: open account, deposit, search, choose order, confirm">
+        <!-- Step 1 -->
+        <circle cx="55" cy="40" r="20" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="55" y="45" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">1</text>
+        <text x="55" y="72" text-anchor="middle" font-size="10" fill="#4a4543" font-weight="600">Open</text>
+        <text x="55" y="84" text-anchor="middle" font-size="10" fill="#4a4543">Account</text>
+        <!-- Arrow -->
+        <path d="M80 40 L100 40" stroke="#e5e0d8" stroke-width="1.5"/>
+        <polygon points="100,37 106,40 100,43" fill="#e5e0d8"/>
+
+        <!-- Step 2 -->
+        <circle cx="135" cy="40" r="20" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="135" y="45" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">2</text>
+        <text x="135" y="72" text-anchor="middle" font-size="10" fill="#4a4543" font-weight="600">Deposit</text>
+        <text x="135" y="84" text-anchor="middle" font-size="10" fill="#4a4543">Money</text>
+        <!-- Arrow -->
+        <path d="M160 40 L180 40" stroke="#e5e0d8" stroke-width="1.5"/>
+        <polygon points="180,37 186,40 180,43" fill="#e5e0d8"/>
+
+        <!-- Step 3 -->
+        <circle cx="215" cy="40" r="20" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="215" y="45" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">3</text>
+        <text x="215" y="72" text-anchor="middle" font-size="10" fill="#4a4543" font-weight="600">Search</text>
+        <text x="215" y="84" text-anchor="middle" font-size="10" fill="#4a4543">Ticker</text>
+        <!-- Arrow -->
+        <path d="M240 40 L260 40" stroke="#e5e0d8" stroke-width="1.5"/>
+        <polygon points="260,37 266,40 260,43" fill="#e5e0d8"/>
+
+        <!-- Step 4 -->
+        <circle cx="295" cy="40" r="20" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="295" y="45" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">4</text>
+        <text x="295" y="72" text-anchor="middle" font-size="10" fill="#4a4543" font-weight="600">Choose Order</text>
+        <text x="295" y="84" text-anchor="middle" font-size="10" fill="#4a4543">Type &amp; Qty</text>
+        <!-- Arrow -->
+        <path d="M320 40 L340 40" stroke="#e5e0d8" stroke-width="1.5"/>
+        <polygon points="340,37 346,40 340,43" fill="#e5e0d8"/>
+
+        <!-- Step 5 -->
+        <circle cx="375" cy="40" r="20" fill="rgba(46,170,110,0.15)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="375" y="45" text-anchor="middle" font-size="14" fill="#2eaa6e" font-weight="700">5</text>
+        <text x="375" y="72" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Review &amp;</text>
+        <text x="375" y="84" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Confirm</text>
+
+        <!-- Detail boxes below -->
+        <rect x="20" y="100" width="240" height="85" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="36" y="120" font-size="11" fill="#5b8fd9" font-weight="600">Popular Brokers:</text>
+        <text x="36" y="138" font-size="11" fill="#4a4543">Fidelity, Schwab</text>
+        <text x="36" y="154" font-size="11" fill="#4a4543">Interactive Brokers, Robinhood</text>
+        <text x="36" y="174" font-size="10" fill="#a09890">Most have $0 commissions</text>
+
+        <rect x="280" y="100" width="240" height="85" rx="8" fill="rgba(46,170,110,0.05)" stroke="#2eaa6e" stroke-width="1"/>
+        <text x="296" y="120" font-size="11" fill="#2eaa6e" font-weight="600">Before you confirm, check:</text>
+        <text x="296" y="138" font-size="11" fill="#4a4543">- Ticker symbol correct?</text>
+        <text x="296" y="154" font-size="11" fill="#4a4543">- Buy (not sell)?</text>
+        <text x="296" y="170" font-size="11" fill="#4a4543">- Quantity right?</text>
+      </svg>
+
+      <h3>Step-by-Step</h3>
+      <ol>
+        <li><strong>Open a brokerage account:</strong> This is your "stock store" account. Popular choices: Fidelity, Charles Schwab, Interactive Brokers, or Robinhood. Takes 5-10 minutes online. You'll need your ID and bank info.</li>
+        <li><strong>Deposit money:</strong> Link your bank account and transfer funds. Most brokers allow bank transfers (1-3 days) or wire transfers (same day).</li>
+        <li><strong>Search for the stock ticker:</strong> Every stock has a short code. Apple = AAPL. Vanguard S&P 500 ETF = VOO. Type it in the search bar.</li>
+        <li><strong>Choose order type and quantity:</strong> Market order or limit order? How many shares (or how many dollars worth)? For popular ETFs, a market order during regular hours is fine.</li>
+        <li><strong>Review and confirm:</strong> Double-check the ticker, quantity, and estimated total cost. Then hit "Buy." You now own shares.</li>
+      </ol>
+
+      <div class="key-point">
+        That's it. Five steps. The hardest part is step 1 (opening the account). Once that's done, buying a stock takes about 30 seconds. Start with one share of a broad ETF like VOO to get comfortable.
+      </div>
+    </article>
+
+    <!-- KP 4: Bid-Ask Spread -->
+    <article class="kp-card" id="kp-spread">
+      <h2>Bid-Ask Spread: Your Hidden Cost</h2>
+      <p>When you look at a stock price, there are actually <strong>two prices</strong> — and the gap between them costs you money.</p>
+
+      <svg width="100%" height="220" viewBox="0 0 540 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Bid-ask spread illustration: bid is what buyers offer, ask is what sellers want, the gap is your cost">
+        <!-- Bid side -->
+        <rect x="30" y="20" width="180" height="90" rx="10" fill="rgba(46,170,110,0.06)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="120" y="48" text-anchor="middle" font-size="14" fill="#2eaa6e" font-weight="700">Bid: $99.50</text>
+        <text x="120" y="68" text-anchor="middle" font-size="11" fill="#4a4543">Highest price buyers</text>
+        <text x="120" y="82" text-anchor="middle" font-size="11" fill="#4a4543">are willing to pay</text>
+        <text x="120" y="100" text-anchor="middle" font-size="10" fill="#a09890">(You sell at this price)</text>
+
+        <!-- Spread gap in the middle -->
+        <rect x="225" y="30" width="90" height="70" rx="8" fill="rgba(224,92,92,0.08)" stroke="#e05c5c" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="270" y="55" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="700">SPREAD</text>
+        <text x="270" y="75" text-anchor="middle" font-size="16" fill="#e05c5c" font-weight="700">$1.00</text>
+        <text x="270" y="90" text-anchor="middle" font-size="10" fill="#e05c5c">Your cost</text>
+
+        <!-- Ask side -->
+        <rect x="330" y="20" width="180" height="90" rx="10" fill="rgba(91,143,217,0.06)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="420" y="48" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">Ask: $100.50</text>
+        <text x="420" y="68" text-anchor="middle" font-size="11" fill="#4a4543">Lowest price sellers</text>
+        <text x="420" y="82" text-anchor="middle" font-size="11" fill="#4a4543">will accept</text>
+        <text x="420" y="100" text-anchor="middle" font-size="10" fill="#a09890">(You buy at this price)</text>
+
+        <!-- Arrows between -->
+        <path d="M210 65 L225 65" stroke="#2eaa6e" stroke-width="1.5"/>
+        <path d="M315 65 L330 65" stroke="#5b8fd9" stroke-width="1.5"/>
+
+        <!-- Comparison boxes below -->
+        <rect x="30" y="130" width="230" height="70" rx="8" fill="rgba(46,170,110,0.05)" stroke="#2eaa6e" stroke-width="1"/>
+        <text x="145" y="150" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Liquid Stock (e.g. AAPL)</text>
+        <text x="145" y="168" text-anchor="middle" font-size="12" fill="#4a4543">Spread: <tspan font-weight="700" fill="#2eaa6e">$0.01</tspan></text>
+        <text x="145" y="186" text-anchor="middle" font-size="10" fill="#a09890">Millions of trades/day</text>
+
+        <rect x="280" y="130" width="230" height="70" rx="8" fill="rgba(224,92,92,0.05)" stroke="#e05c5c" stroke-width="1"/>
+        <text x="395" y="150" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Small / Illiquid Stock</text>
+        <text x="395" y="168" text-anchor="middle" font-size="12" fill="#4a4543">Spread: <tspan font-weight="700" fill="#e05c5c">$0.50+</tspan></text>
+        <text x="395" y="186" text-anchor="middle" font-size="10" fill="#a09890">Fewer buyers and sellers</text>
+      </svg>
+
+      <div class="analogy">
+        Think of buying a used car. The dealer wants $20,000 (the ask). You offer $19,000 (the bid). The $1,000 gap is the "spread." In a busy market with many cars and buyers, the gap shrinks because there's competition. In a sleepy small town, the gap is bigger.
+      </div>
+
+      <h3>Why It Matters</h3>
+      <ul>
+        <li>The spread is an invisible fee you pay every time you trade</li>
+        <li>If you buy at $100.50 (ask) and immediately sell, you'd only get $99.50 (bid) — instant $1 loss</li>
+        <li>Popular ETFs like VOO have spreads of $0.01-0.02 — nearly free</li>
+        <li>Obscure penny stocks can have spreads of 5-10% of the price</li>
+      </ul>
+
+      <div class="key-point">
+        Stick to liquid, popular stocks and ETFs where the bid-ask spread is tiny (pennies). This is another reason why VOO and QQQ are great for beginners — the spread is essentially zero.
+      </div>
+    </article>
+
+    <!-- KP 5: Settlement (T+1) -->
+    <article class="kp-card" id="kp-settlement">
+      <h2>Settlement: T+1</h2>
+      <p>When you click "Buy," the shares appear in your account instantly — but behind the scenes, the <strong>legal transfer</strong> of money and ownership takes one more business day.</p>
+
+      <svg width="100%" height="150" viewBox="0 0 540 150" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="T+1 settlement timeline: trade on day 0, settlement completes on day 1">
+        <!-- Trade day -->
+        <circle cx="130" cy="50" r="30" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="130" y="46" text-anchor="middle" font-size="14" fill="#5b8fd9" font-weight="700">T</text>
+        <text x="130" y="60" text-anchor="middle" font-size="10" fill="#5b8fd9">Trade Day</text>
+        <text x="130" y="100" text-anchor="middle" font-size="11" fill="#4a4543" font-weight="600">You click "Buy"</text>
+        <text x="130" y="116" text-anchor="middle" font-size="10" fill="#a09890">Shares show in account</text>
+        <text x="130" y="130" text-anchor="middle" font-size="10" fill="#a09890">Price locked in</text>
+
+        <!-- Arrow -->
+        <path d="M170 50 L340 50" stroke="#e5e0d8" stroke-width="2" stroke-dasharray="6 4"/>
+        <polygon points="340,46 350,50 340,54" fill="#e5e0d8"/>
+        <text x="255" y="42" text-anchor="middle" font-size="10" fill="#a09890">+1 business day</text>
+
+        <!-- Settlement day -->
+        <circle cx="390" cy="50" r="30" fill="rgba(46,170,110,0.12)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="390" y="46" text-anchor="middle" font-size="14" fill="#2eaa6e" font-weight="700">T+1</text>
+        <text x="390" y="60" text-anchor="middle" font-size="10" fill="#2eaa6e">Settlement</text>
+        <text x="390" y="100" text-anchor="middle" font-size="11" fill="#4a4543" font-weight="600">Legal transfer completes</text>
+        <text x="390" y="116" text-anchor="middle" font-size="10" fill="#a09890">Money leaves your account</text>
+        <text x="390" y="130" text-anchor="middle" font-size="10" fill="#a09890">Shares are officially yours</text>
+      </svg>
+
+      <h3>What This Means in Practice</h3>
+      <ul>
+        <li><strong>"T"</strong> = the trade date (when you click Buy/Sell)</li>
+        <li><strong>"+1"</strong> = one business day later, the official ownership transfer is complete</li>
+        <li>Your brokerage handles all of this automatically — you don't need to do anything</li>
+        <li>The US moved from T+2 to T+1 in May 2024, making settlements faster</li>
+      </ul>
+
+      <p>For most long-term investors, settlement is invisible. You see the shares in your portfolio right away. The only time T+1 matters is if you sell and want to withdraw the cash — you'll need to wait one business day for the funds to "settle."</p>
+
+      <div class="key-point">
+        T+1 is plumbing you almost never need to think about. Buy your shares, and they're effectively yours immediately. The legal paperwork catches up one day later. Set it and forget it.
+      </div>
+    </article>
+
+    <!-- KP 6: Emergency Fund First -->
+    <article class="kp-card" id="kp-emergency">
+      <h2>Emergency Fund First</h2>
+      <p>Before you invest a single dollar in stocks, there's one non-negotiable step: <strong>build an emergency fund</strong>.</p>
+
+      <svg width="100%" height="230" viewBox="0 0 540 230" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Priority pyramid: basic needs at the bottom, then emergency fund, then invest at the top">
+        <!-- Pyramid -->
+        <!-- Top tier: Invest -->
+        <path d="M270 20 L340 90 L200 90 Z" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="1.5"/>
+        <text x="270" y="65" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="700">INVEST</text>
+        <text x="270" y="80" text-anchor="middle" font-size="9" fill="#5b8fd9">Only surplus $</text>
+
+        <!-- Middle tier: Emergency Fund -->
+        <path d="M200 92 L340 92 L380 145 L160 145 Z" fill="rgba(46,170,110,0.1)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="270" y="115" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="700">EMERGENCY FUND</text>
+        <text x="270" y="132" text-anchor="middle" font-size="10" fill="#2eaa6e">3-6 months expenses in cash</text>
+
+        <!-- Bottom tier: Basic Needs -->
+        <path d="M160 147 L380 147 L420 200 L120 200 Z" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5"/>
+        <text x="270" y="168" text-anchor="middle" font-size="12" fill="#d4930d" font-weight="700">BASIC NEEDS</text>
+        <text x="270" y="185" text-anchor="middle" font-size="10" fill="#4a4543">Rent, food, utilities, insurance</text>
+
+        <!-- Priority arrow on the right -->
+        <path d="M440 190 L440 30" stroke="#a09890" stroke-width="1.5"/>
+        <polygon points="436,30 440,20 444,30" fill="#a09890"/>
+        <text x="450" y="110" font-size="10" fill="#a09890" transform="rotate(90,450,110)">Priority order</text>
+
+        <!-- Warning annotation -->
+        <text x="270" y="222" text-anchor="middle" font-size="10" fill="#e05c5c" font-weight="600">Build from bottom up. Never skip a level.</text>
+      </svg>
+
+      <h3>Why This Is Non-Negotiable</h3>
+      <ul>
+        <li>The stock market can drop 30% in a single month (it's happened multiple times)</li>
+        <li>If you lose your job during a crash and need money for rent, you'll be <strong>forced to sell at a loss</strong></li>
+        <li>An emergency fund means you'll never need to touch your investments during bad times</li>
+        <li>This is the difference between "temporary paper loss" and "permanent real loss"</li>
+      </ul>
+
+      <h3>The Rules</h3>
+      <ul>
+        <li><strong>Save 3-6 months of living expenses</strong> in a high-yield savings account or money market fund</li>
+        <li><strong>Don't invest money you'll need in the next 3-5 years</strong> (car, wedding, down payment)</li>
+        <li><strong>Only invest true surplus</strong> — money you could lose 50% of and still sleep fine</li>
+      </ul>
+
+      <div class="warning-box">
+        The #1 reason beginners lose money in the stock market isn't bad stock picks — it's being forced to sell during a crash because they need the cash. An emergency fund prevents this entirely.
+      </div>
+
+      <div class="book-ref">
+        Morgan Housel, <em>The Psychology of Money</em>: "Reasonable is more important than rational." — Having a cash cushion isn't mathematically optimal, but it lets you sleep at night and stay in the game. Choose the approach you can actually stick with.
+      </div>
+    </article>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+      <h2>Module 3 Quiz</h2>
+      <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px;">Answer all correctly to complete this module. You can retry as many times as you want.</p>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q1.</span> Which order type guarantees execution but not price?</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Market order</div>
+          <div class="quiz-option">Limit order</div>
+          <div class="quiz-option">Stop order</div>
+          <div class="quiz-option">None of the above</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q2.</span> US stock market regular trading hours (Eastern) are:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">8:00 AM - 3:00 PM</div>
+          <div class="quiz-option">9:00 AM - 5:00 PM</div>
+          <div class="quiz-option">9:30 AM - 4:00 PM</div>
+          <div class="quiz-option">10:00 AM - 4:30 PM</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q3.</span> The bid-ask spread is:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">The commission fee your broker charges</div>
+          <div class="quiz-option">The gap between what buyers offer and what sellers want</div>
+          <div class="quiz-option">The difference between today's high and low price</div>
+          <div class="quiz-option">The annual return on a stock</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q4.</span> T+1 settlement means:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">You must hold the stock for at least 1 day before selling</div>
+          <div class="quiz-option">The stock price changes once per day</div>
+          <div class="quiz-option">The trade legally settles 1 business day after you buy</div>
+          <div class="quiz-option">You can only make 1 trade per day</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q5.</span> Before investing, you should first:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Learn technical analysis</div>
+          <div class="quiz-option">Build an emergency fund of 3-6 months expenses</div>
+          <div class="quiz-option">Wait for a market crash to buy low</div>
+          <div class="quiz-option">Find a financial advisor</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q6.</span> Why is pre-market trading riskier?</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Lower trading volume</div>
+          <div class="quiz-option">Wider bid-ask spreads</div>
+          <div class="quiz-option">More volatile price swings</div>
+          <div class="quiz-option">All of the above: lower volume, wider spreads, more volatile</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-result">
+        <div class="score">0/6</div>
+        <div class="score-label">Get all 6 correct to complete this module</div>
+        <button class="retry-btn">Try Again</button>
+      </div>
+    </section>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+      <a href="key-metrics.html">&larr; Module 2: Key Metrics</a>
+      <a href="reading-charts.html" class="nav-next">Module 4: Reading Charts &rarr;</a>
+    </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2026 Stock School. Educational content only — not financial advice.</p>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+  // Quiz data for Module 3
+  const quizData = [
+    { answer: 0, explanation: "A market order executes immediately at the best available price. You're guaranteed to buy/sell, but the exact price may vary slightly from what you saw on screen." },
+    { answer: 2, explanation: "The US stock market's regular trading hours are 9:30 AM to 4:00 PM Eastern Time, Monday through Friday. That's 9:30 PM to 4:00 AM Beijing time." },
+    { answer: 1, explanation: "The bid-ask spread is the gap between the highest price buyers will pay (bid) and the lowest price sellers will accept (ask). This gap is a hidden cost every time you trade." },
+    { answer: 2, explanation: "T+1 means the trade legally settles 1 business day after execution. Your brokerage handles this automatically — you see the shares immediately, but the official transfer completes the next day." },
+    { answer: 1, explanation: "Before investing any money, save 3-6 months of living expenses as an emergency fund. This ensures you'll never be forced to sell investments at a loss because you need cash." },
+    { answer: 3, explanation: "Pre-market and after-hours trading is riskier because of lower volume (fewer participants), wider bid-ask spreads (higher costs), and more volatile price swings. Beginners should trade during regular hours." }
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    StockSchool.init({
+      moduleId: 'm3',
+      totalKps: 6,
+      quizData: quizData
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Diversification & Risk Explained — Stock School</title>
+  <meta name="description" content="Learn what investment risk really means, how diversification works, VOO vs SPY vs VTI, and the three-fund portfolio. Simple guide for beginners.">
+  <link rel="canonical" href="https://stockschool.site/modules/risk-and-diversification.html">
+  <meta property="og:title" content="Stock Market Diversification & Risk Explained — Stock School">
+  <meta property="og:description" content="Learn what investment risk really means, how diversification works, VOO vs SPY vs VTI, and the three-fund portfolio. Simple guide for beginners.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockschool.site/modules/risk-and-diversification.html">
+  <meta property="og:image" content="https://stockschool.site/assets/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://stockschool.site/modules/risk-and-diversification.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is investment risk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Real investment risk is the permanent loss of capital, not temporary price drops. A stock falling 30% is volatility (like turbulence on a plane), but a stock going to zero is actual risk (like the plane crashing). As long as you hold diversified funds long-term, temporary drops recover."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is diversification in investing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Diversification means spreading your investments across different sectors, company sizes, and countries so that no single failure can wipe you out. Owning 10 tech stocks is NOT diversified — true diversification means your baskets are on different trucks, not the same one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between VOO, SPY, and VTI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VOO and SPY both track the S&P 500 (500 large US companies), while VTI tracks the total US stock market (4000+ companies including small and mid-cap). VOO and VTI charge 0.03% in fees, SPY charges 0.0945%. For most long-term investors, VOO or VTI are the best choices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the three-fund portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The three-fund portfolio consists of US stocks (VTI), international stocks (VXUS), and US bonds (BND). A classic allocation is 60% US stocks, 20% international, and 20% bonds. This simple combination covers 15,000+ securities worldwide and provides broad global diversification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does rebalancing mean in investing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rebalancing means periodically adjusting your portfolio back to your target allocation. Over time, some investments grow faster and become a larger percentage than intended. You sell some winners and buy some laggards to maintain your original risk level. Most investors rebalance annually or when allocations drift more than 5%."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Stock<span>School</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Modules</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+    <div class="nav-progress">
+      <span class="nav-progress-text">0/8 completed</span>
+      <div class="nav-progress-track">
+        <div class="nav-progress-fill"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Module Layout -->
+<div class="module-layout">
+  <!-- Sidebar -->
+  <aside class="module-sidebar">
+    <div class="sidebar-title">Module 5</div>
+    <a class="sidebar-item" data-kp="kp-risk"><span class="sidebar-icon pending"></span>What Is Investment Risk?</a>
+    <a class="sidebar-item" data-kp="kp-diversify"><span class="sidebar-icon pending"></span>Diversification</a>
+    <a class="sidebar-item" data-kp="kp-voo"><span class="sidebar-icon pending"></span>VOO vs SPY vs VTI</a>
+    <a class="sidebar-item" data-kp="kp-threefund"><span class="sidebar-icon pending"></span>Three-Fund Portfolio</a>
+    <a class="sidebar-item" data-kp="kp-rebalancing"><span class="sidebar-icon pending"></span>Rebalancing</a>
+    <a class="sidebar-item" data-kp="kp-voochill"><span class="sidebar-icon pending"></span>"Just Buy VOO and Chill"</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="module-content">
+    <h1>Risk & Diversification</h1>
+    <div class="module-meta">
+      <span>Module 5 of 8</span>
+      <span>6 concepts</span>
+      <span>~12 min read</span>
+    </div>
+
+    <!-- KP 1: What Is Investment Risk? -->
+    <article class="kp-card" id="kp-risk">
+      <h2>What Is Investment Risk?</h2>
+      <p>Most people think risk means "the price goes down." That's wrong. A price drop is <strong>volatility</strong> — it's uncomfortable, but it's not dangerous. Real risk is the <strong>permanent loss of capital</strong> — your money goes to zero and never comes back.</p>
+
+      <!-- SVG: Volatility vs Real Risk -->
+      <svg width="100%" height="180" viewBox="0 0 520 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Volatility is a wavy line trending up; real risk is a line crashing to zero">
+        <!-- Left: Volatility -->
+        <rect x="10" y="10" width="240" height="155" rx="10" fill="rgba(46,170,110,0.04)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="130" y="35" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">Volatility (NOT real risk)</text>
+        <!-- Wavy line trending up -->
+        <polyline points="30,130 55,110 70,125 95,95 115,115 140,85 160,100 185,70 210,80 230,55" stroke="#2eaa6e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="130" y="152" text-anchor="middle" font-size="11" fill="#4a4543">Scary bumps, but trending UP</text>
+
+        <!-- Right: Real Risk -->
+        <rect x="270" y="10" width="240" height="155" rx="10" fill="rgba(224,92,92,0.04)" stroke="#e05c5c" stroke-width="1.5"/>
+        <text x="390" y="35" text-anchor="middle" font-size="13" fill="#e05c5c" font-weight="700">Real Risk (permanent loss)</text>
+        <!-- Line crashing to zero -->
+        <polyline points="290,60 310,55 340,65 360,58 380,70 395,90 405,120 410,140 415,145" stroke="#e05c5c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="415" y="145" font-size="10" fill="#e05c5c" font-weight="600">$0</text>
+        <text x="390" y="152" text-anchor="middle" font-size="11" fill="#4a4543">Company goes bankrupt</text>
+      </svg>
+
+      <div class="analogy">
+        Turbulence on a plane is scary — your stomach drops, your coffee spills. But the plane lands safely 99.99% of the time. That's volatility. The plane actually crashing? That's real risk. In investing, a stock dropping 30% and recovering is turbulence. A company going bankrupt and your shares hitting $0 — that's the plane crash.
+      </div>
+
+      <h3>Types of Risk</h3>
+      <ul>
+        <li><strong>Company risk:</strong> One company fails (Enron, Lehman Brothers). Solution: don't put all your money in one stock.</li>
+        <li><strong>Sector risk:</strong> An entire industry declines (dot-com bust in 2000). Solution: diversify across sectors.</li>
+        <li><strong>Market risk:</strong> The whole market drops (2008, 2020). Solution: time — markets have always recovered.</li>
+        <li><strong>Inflation risk:</strong> Your cash loses purchasing power. Solution: invest in assets that grow faster than inflation.</li>
+      </ul>
+
+      <div class="key-point">
+        Volatility is the price you pay for long-term returns. If stocks never went down temporarily, everyone would buy them, and returns would be zero. The bumpy ride IS the reason you get paid 10% per year.
+      </div>
+
+      <div class="book-ref">
+        Benjamin Graham, <em>The Intelligent Investor</em>: Graham distinguishes between the "defensive" investor (who prioritizes safety and simplicity) and the "enterprising" investor (who does more research for potentially higher returns). For most people, defensive investing — buying index funds and holding — eliminates the biggest risks.
+      </div>
+    </article>
+
+    <!-- KP 2: Diversification -->
+    <article class="kp-card" id="kp-diversify">
+      <h2>Diversification</h2>
+      <p>You've heard "don't put all your eggs in one basket." But here's the part most people miss: <strong>make sure the baskets aren't all on the same truck.</strong></p>
+
+      <!-- SVG: Concentrated vs Diversified -->
+      <svg width="100%" height="200" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Concentrated portfolio vs truly diversified portfolio">
+        <!-- Left: Bad diversification -->
+        <rect x="10" y="10" width="240" height="180" rx="10" fill="rgba(224,92,92,0.04)" stroke="#e05c5c" stroke-width="1.5"/>
+        <text x="130" y="35" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="700">Looks diversified, isn't</text>
+        <!-- Truck carrying all baskets -->
+        <rect x="40" y="70" width="180" height="50" rx="6" fill="rgba(224,92,92,0.08)" stroke="#e05c5c" stroke-width="1"/>
+        <text x="130" y="90" text-anchor="middle" font-size="10" fill="#e05c5c">All Tech Stocks</text>
+        <!-- Individual boxes inside truck -->
+        <rect x="50" y="78" width="30" height="20" rx="3" fill="rgba(224,92,92,0.15)" stroke="#e05c5c" stroke-width="0.8"/>
+        <text x="65" y="92" text-anchor="middle" font-size="7" fill="#e05c5c">AAPL</text>
+        <rect x="85" y="78" width="30" height="20" rx="3" fill="rgba(224,92,92,0.15)" stroke="#e05c5c" stroke-width="0.8"/>
+        <text x="100" y="92" text-anchor="middle" font-size="7" fill="#e05c5c">GOOG</text>
+        <rect x="120" y="78" width="30" height="20" rx="3" fill="rgba(224,92,92,0.15)" stroke="#e05c5c" stroke-width="0.8"/>
+        <text x="135" y="92" text-anchor="middle" font-size="7" fill="#e05c5c">MSFT</text>
+        <rect x="155" y="78" width="30" height="20" rx="3" fill="rgba(224,92,92,0.15)" stroke="#e05c5c" stroke-width="0.8"/>
+        <text x="170" y="92" text-anchor="middle" font-size="7" fill="#e05c5c">META</text>
+        <rect x="190" y="78" width="25" height="20" rx="3" fill="rgba(224,92,92,0.15)" stroke="#e05c5c" stroke-width="0.8"/>
+        <text x="202" y="92" text-anchor="middle" font-size="7" fill="#e05c5c">...</text>
+        <!-- Wheels -->
+        <circle cx="80" cy="125" r="6" fill="#e05c5c"/>
+        <circle cx="180" cy="125" r="6" fill="#e05c5c"/>
+        <text x="130" y="152" text-anchor="middle" font-size="10" fill="#e05c5c">5 baskets, 1 truck</text>
+        <text x="130" y="168" text-anchor="middle" font-size="10" fill="#4a4543">If tech crashes, ALL crash</text>
+
+        <!-- Right: True diversification -->
+        <rect x="270" y="10" width="240" height="180" rx="10" fill="rgba(46,170,110,0.04)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="390" y="35" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="700">True diversification</text>
+        <!-- Multiple small trucks -->
+        <rect x="285" y="55" width="65" height="25" rx="4" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="1"/>
+        <text x="317" y="72" text-anchor="middle" font-size="8" fill="#5b8fd9">Tech</text>
+        <rect x="360" y="55" width="65" height="25" rx="4" fill="rgba(46,170,110,0.1)" stroke="#2eaa6e" stroke-width="1"/>
+        <text x="392" y="72" text-anchor="middle" font-size="8" fill="#2eaa6e">Health</text>
+        <rect x="435" y="55" width="65" height="25" rx="4" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1"/>
+        <text x="467" y="72" text-anchor="middle" font-size="8" fill="#d4930d">Finance</text>
+        <rect x="285" y="95" width="65" height="25" rx="4" fill="rgba(179,77,209,0.1)" stroke="#b34dd1" stroke-width="1"/>
+        <text x="317" y="112" text-anchor="middle" font-size="8" fill="#b34dd1">Energy</text>
+        <rect x="360" y="95" width="65" height="25" rx="4" fill="rgba(224,92,92,0.1)" stroke="#e05c5c" stroke-width="1"/>
+        <text x="392" y="112" text-anchor="middle" font-size="8" fill="#e05c5c">Int'l</text>
+        <rect x="435" y="95" width="65" height="25" rx="4" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="1"/>
+        <text x="467" y="112" text-anchor="middle" font-size="8" fill="#5b8fd9">Bonds</text>
+        <text x="390" y="148" text-anchor="middle" font-size="10" fill="#2eaa6e">Different trucks, different roads</text>
+        <text x="390" y="168" text-anchor="middle" font-size="10" fill="#4a4543">One crash doesn't ruin you</text>
+      </svg>
+
+      <div class="analogy">
+        From a popular Reddit thread: "I have my eggs in 5 different baskets!" Great — but if all 5 baskets are sitting in the same truck and the truck crashes, you still lose all your eggs. Owning Apple, Google, Microsoft, Meta, and Nvidia feels diversified, but it's all tech. When tech drops, they all drop together.
+      </div>
+
+      <h3>Three Dimensions of Diversification</h3>
+      <ul>
+        <li><strong>Across sectors:</strong> Tech, healthcare, finance, energy, consumer goods, etc.</li>
+        <li><strong>Across company sizes:</strong> Large-cap (Apple), mid-cap, small-cap startups</li>
+        <li><strong>Across countries:</strong> US, Europe, Asia, emerging markets</li>
+      </ul>
+
+      <p>The easiest way to achieve all three? Buy a broad index fund. One share of VTI gives you 4,000+ US companies across every sector and size. Add VXUS for international, and you own the world.</p>
+
+      <div class="key-point">
+        True diversification means your investments don't all move in the same direction at the same time. When tech falls, healthcare might rise. When the US struggles, international markets might hold up. That's the real protection.
+      </div>
+    </article>
+
+    <!-- KP 3: VOO vs SPY vs VTI -->
+    <article class="kp-card" id="kp-voo">
+      <h2>VOO vs SPY vs VTI</h2>
+      <p>These are the three most popular US stock ETFs. They all track the US market, but there are important differences:</p>
+
+      <!-- Comparison Table -->
+      <table style="width:100%; border-collapse:collapse; font-size:14px; margin:16px 0;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border);">
+            <th style="text-align:left; padding:10px 8px; color:var(--text-bright);">Feature</th>
+            <th style="text-align:left; padding:10px 8px; color:var(--accent);">VOO</th>
+            <th style="text-align:left; padding:10px 8px;">SPY</th>
+            <th style="text-align:left; padding:10px 8px;">VTI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px;">What it tracks</td>
+            <td style="padding:8px;">S&P 500</td>
+            <td style="padding:8px;">S&P 500</td>
+            <td style="padding:8px;">Total US Market</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px;"># of stocks</td>
+            <td style="padding:8px;">~500</td>
+            <td style="padding:8px;">~500</td>
+            <td style="padding:8px;">~4,000+</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px;">Expense ratio</td>
+            <td style="padding:8px; color:var(--green);">0.03%</td>
+            <td style="padding:8px; color:var(--red);">0.0945%</td>
+            <td style="padding:8px; color:var(--green);">0.03%</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px;">Provider</td>
+            <td style="padding:8px;">Vanguard</td>
+            <td style="padding:8px;">State Street (SPDR)</td>
+            <td style="padding:8px;">Vanguard</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px;">Liquidity</td>
+            <td style="padding:8px;">Very high</td>
+            <td style="padding:8px; color:var(--accent);">Highest (most traded ETF)</td>
+            <td style="padding:8px;">Very high</td>
+          </tr>
+          <tr>
+            <td style="padding:8px;">Includes small-caps?</td>
+            <td style="padding:8px;">No</td>
+            <td style="padding:8px;">No</td>
+            <td style="padding:8px; color:var(--green);">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>So Which One?</h3>
+      <ul>
+        <li><strong>VOO:</strong> Lowest fees, tracks the 500 largest US companies. The default choice for most long-term investors.</li>
+        <li><strong>SPY:</strong> Same S&P 500 index but slightly higher fees (0.0945% vs 0.03%). Best for active traders who need maximum liquidity.</li>
+        <li><strong>VTI:</strong> Includes everything in VOO plus 3,500 more small and mid-sized companies. Slightly more diversified. Same low fees as VOO.</li>
+      </ul>
+
+      <p>In practice, VOO and VTI have nearly identical long-term performance. The small-caps in VTI add a tiny bit of extra diversification but haven't consistently outperformed. You honestly can't go wrong with either.</p>
+
+      <div class="key-point">
+        VOO or VTI for long-term investing. SPY for active trading. For buy-and-hold investors, the 0.06% fee difference between VOO and SPY adds up over decades: on $100,000 invested for 30 years, that's roughly $1,800 saved by choosing VOO.
+      </div>
+    </article>
+
+    <!-- Email Gate -->
+    <div class="email-gate-overlay" id="emailGate">
+      <div class="email-gate-blur">
+        <!-- KP 4: Three-Fund Portfolio -->
+        <article class="kp-card" id="kp-threefund">
+          <h2>The Three-Fund Portfolio</h2>
+          <p>If diversification is the goal, the three-fund portfolio is the simplest way to achieve it. Three funds, and you own the entire world:</p>
+
+          <!-- SVG: Pie chart -->
+          <svg width="100%" height="220" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Three-fund portfolio: 60% US stocks, 20% international, 20% bonds">
+            <!-- Pie chart -->
+            <!-- 60% US stocks (216 degrees, starting from top) -->
+            <path d="M200 110 L200 30 A80 80 0 1 1 130.72 178.56 Z" fill="rgba(91,143,217,0.2)" stroke="#5b8fd9" stroke-width="2"/>
+            <!-- 20% International (72 degrees) -->
+            <path d="M200 110 L130.72 178.56 A80 80 0 0 1 144.72 41.44 Z" fill="rgba(46,170,110,0.2)" stroke="#2eaa6e" stroke-width="2"/>
+            <!-- 20% Bonds (72 degrees) -->
+            <path d="M200 110 L144.72 41.44 A80 80 0 0 1 200 30 Z" fill="rgba(212,147,13,0.2)" stroke="#d4930d" stroke-width="2"/>
+
+            <!-- Labels -->
+            <text x="240" y="90" font-size="13" fill="#5b8fd9" font-weight="600">60% — US Stocks (VTI)</text>
+            <text x="240" y="108" font-size="11" fill="#4a4543">4,000+ US companies</text>
+
+            <text x="320" y="150" font-size="13" fill="#2eaa6e" font-weight="600">20% — International (VXUS)</text>
+            <text x="320" y="168" font-size="11" fill="#4a4543">8,000+ non-US companies</text>
+
+            <text x="320" y="40" font-size="13" fill="#d4930d" font-weight="600">20% — Bonds (BND)</text>
+            <text x="320" y="58" font-size="11" fill="#4a4543">US investment-grade bonds</text>
+
+            <text x="200" y="210" text-anchor="middle" font-size="12" fill="#4a4543" font-weight="600">3 funds = 15,000+ securities worldwide</text>
+          </svg>
+
+          <h3>Why These Three?</h3>
+          <ul>
+            <li><strong>VTI (US stocks):</strong> The engine of growth. US companies have been the strongest performers for decades.</li>
+            <li><strong>VXUS (International stocks):</strong> The safety net. When the US underperforms (it happens in cycles), international markets may pick up the slack.</li>
+            <li><strong>BND (US bonds):</strong> The shock absorber. Bonds are boring, but they cushion your portfolio during stock crashes.</li>
+          </ul>
+
+          <h3>Age-Based Rule of Thumb</h3>
+          <p>A classic guideline: <strong>bond percentage = your age</strong>. If you're 30, hold 30% bonds. If you're 60, hold 60% bonds. The idea: as you get closer to needing the money, you shift toward stability.</p>
+          <p>This is a rough guideline, not a rule. Many young investors hold 0-10% bonds because they have decades to recover from crashes.</p>
+
+          <div class="key-point">
+            The three-fund portfolio is the investing equivalent of a balanced meal. You could spend years optimizing your diet with exotic supplements, or you could eat vegetables, protein, and whole grains and be healthier than 90% of people. Simple works.
+          </div>
+        </article>
+
+        <!-- KP 5: Rebalancing -->
+        <article class="kp-card" id="kp-rebalancing">
+          <h2>Rebalancing</h2>
+          <p>You set your target allocation (say, 60/20/20). But the market doesn't care about your targets. Over time, winners grow bigger and your allocation drifts.</p>
+
+          <!-- SVG: Before and After rebalancing -->
+          <svg width="100%" height="200" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Before rebalancing: allocation has drifted. After: back to target.">
+            <!-- Before -->
+            <rect x="10" y="10" width="230" height="175" rx="10" fill="rgba(224,92,92,0.04)" stroke="#e05c5c" stroke-width="1.5"/>
+            <text x="125" y="35" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="700">Before (drifted)</text>
+            <!-- Stacked bar -->
+            <rect x="50" y="50" width="150" height="50" rx="0" fill="rgba(91,143,217,0.25)" stroke="#5b8fd9" stroke-width="1"/>
+            <text x="125" y="80" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">US Stocks — 75%</text>
+            <rect x="50" y="100" width="150" height="20" rx="0" fill="rgba(46,170,110,0.25)" stroke="#2eaa6e" stroke-width="1"/>
+            <text x="125" y="115" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Int'l — 15%</text>
+            <rect x="50" y="120" width="150" height="15" rx="0" fill="rgba(212,147,13,0.25)" stroke="#d4930d" stroke-width="1"/>
+            <text x="125" y="132" text-anchor="middle" font-size="9" fill="#d4930d" font-weight="600">Bonds — 10%</text>
+            <text x="125" y="162" text-anchor="middle" font-size="10" fill="#e05c5c">US stocks grew too big!</text>
+
+            <!-- Arrow -->
+            <path d="M250 100 L270 100" stroke="#a09890" stroke-width="2" stroke-dasharray="4 3"/>
+            <polygon points="270,96 278,100 270,104" fill="#a09890"/>
+
+            <!-- After -->
+            <rect x="280" y="10" width="230" height="175" rx="10" fill="rgba(46,170,110,0.04)" stroke="#2eaa6e" stroke-width="1.5"/>
+            <text x="395" y="35" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="700">After (rebalanced)</text>
+            <!-- Stacked bar -->
+            <rect x="320" y="50" width="150" height="40" rx="0" fill="rgba(91,143,217,0.25)" stroke="#5b8fd9" stroke-width="1"/>
+            <text x="395" y="75" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">US Stocks — 60%</text>
+            <rect x="320" y="90" width="150" height="22" rx="0" fill="rgba(46,170,110,0.25)" stroke="#2eaa6e" stroke-width="1"/>
+            <text x="395" y="105" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Int'l — 20%</text>
+            <rect x="320" y="112" width="150" height="22" rx="0" fill="rgba(212,147,13,0.25)" stroke="#d4930d" stroke-width="1"/>
+            <text x="395" y="128" text-anchor="middle" font-size="10" fill="#d4930d" font-weight="600">Bonds — 20%</text>
+            <text x="395" y="162" text-anchor="middle" font-size="10" fill="#2eaa6e">Back to target allocation</text>
+          </svg>
+
+          <h3>How Rebalancing Works</h3>
+          <p>Say US stocks had a great year and grew from 60% to 75% of your portfolio. Meanwhile, bonds shrank from 20% to 10%. To rebalance:</p>
+          <ol>
+            <li>Sell some US stocks (the winners)</li>
+            <li>Buy more bonds and international stocks (the laggards)</li>
+            <li>Get back to your 60/20/20 target</li>
+          </ol>
+
+          <p>It feels counterintuitive — selling your winners and buying your losers. But this is systematically "buying low and selling high," which is exactly what smart investors do.</p>
+
+          <h3>When to Rebalance</h3>
+          <ul>
+            <li><strong>Calendar-based:</strong> Once a year (pick a date, like your birthday)</li>
+            <li><strong>Threshold-based:</strong> Whenever any allocation drifts 5% or more from target</li>
+            <li><strong>With new money:</strong> Direct new contributions to the lagging asset class (no selling needed)</li>
+          </ul>
+
+          <div class="warning-box">
+            Don't rebalance too often. Every trade in a taxable account may trigger capital gains taxes. Once a year is plenty for most people.
+          </div>
+
+          <div class="key-point">
+            Rebalancing isn't about maximizing returns — it's about maintaining your chosen risk level. Without it, a balanced portfolio slowly becomes a stock-heavy portfolio, which means more risk than you originally signed up for.
+          </div>
+        </article>
+
+        <!-- KP 6: "Just Buy VOO and Chill" -->
+        <article class="kp-card" id="kp-voochill">
+          <h2>"Just Buy VOO and Chill"</h2>
+          <p>After all this talk of diversification, three-fund portfolios, and rebalancing — here's the simplest strategy that beats most professional investors:</p>
+
+          <p><strong>Buy VOO every month. Don't look at it. Don't sell. Repeat for 20+ years.</strong></p>
+
+          <h3>The Buffett Bet</h3>
+          <p>In 2007, Warren Buffett bet $1 million that the S&P 500 index would beat a hand-picked group of hedge funds over 10 years. The hedge funds charged 2% management fees plus 20% of profits and were managed by some of the smartest people on Wall Street.</p>
+
+          <p>The result after 10 years (2008-2017):</p>
+          <ul>
+            <li><strong>S&P 500 index fund:</strong> +125.8% total return</li>
+            <li><strong>Hedge funds (average):</strong> +36% total return</li>
+          </ul>
+
+          <p>The simple, boring index fund didn't just win — it crushed the pros by more than 3x. Buffett donated the $1 million winnings to charity.</p>
+
+          <h3>Historical Context</h3>
+          <p>The S&P 500 has returned roughly 10% per year on average since 1928. That includes the Great Depression, World War II, the dot-com crash, 2008, and COVID. Through every crisis, the market recovered and went higher.</p>
+
+          <ul>
+            <li>$10,000 invested in 1993 in the S&P 500 would be worth ~$200,000+ today</li>
+            <li>Even if you invested at the worst possible time (right before every crash), you'd still be profitable if you held long enough</li>
+          </ul>
+
+          <div class="book-ref">
+            Morgan Housel, <em>The Psychology of Money</em>: "Tails drive everything." A tiny number of outlier days drive the majority of long-term returns. If you miss the 10 best days in the market over 20 years, your returns get cut in half. The cost of trying to time the market is enormous — you have to be in the market to catch those few critical days.
+          </div>
+
+          <div class="key-point">
+            If the simplest approach (buying an index fund and holding it) beats 90% of professional money managers, why would you try to be clever? The "VOO and chill" strategy works because it keeps you invested through every cycle, captures every good day, and costs almost nothing in fees.
+          </div>
+        </article>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+          <h2>Module 5 Quiz</h2>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px;">Answer all correctly to complete this module. You can retry as many times as you want.</p>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q1.</span> What is the REAL risk in investing?</p>
+            <div class="quiz-options">
+              <div class="quiz-option">Any time the stock price goes down</div>
+              <div class="quiz-option">Short-term volatility and market corrections</div>
+              <div class="quiz-option">Permanent loss of capital, not temporary price drops</div>
+              <div class="quiz-option">Inflation reducing your purchasing power</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q2.</span> Owning 10 different tech stocks is good diversification.</p>
+            <div class="quiz-options">
+              <div class="quiz-option">True — 10 stocks is plenty of diversification</div>
+              <div class="quiz-option">False — they're all in the same sector</div>
+              <div class="quiz-option">True — as long as they're different companies</div>
+              <div class="quiz-option">It depends on the market conditions</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q3.</span> VOO and VTI differ because:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">VOO has lower fees than VTI</div>
+              <div class="quiz-option">VTI only tracks technology stocks</div>
+              <div class="quiz-option">VTI includes small and mid-cap stocks too, not just the S&P 500</div>
+              <div class="quiz-option">VOO includes international stocks but VTI doesn't</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q4.</span> The three-fund portfolio consists of:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">US stocks, international stocks, and bonds</div>
+              <div class="quiz-option">Large-cap, mid-cap, and small-cap stocks</div>
+              <div class="quiz-option">Tech stocks, healthcare stocks, and energy stocks</div>
+              <div class="quiz-option">Stocks, real estate, and cryptocurrency</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q5.</span> Rebalancing means:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">Selling everything and starting over with new investments</div>
+              <div class="quiz-option">Selling some winners and buying some losers to maintain target allocation</div>
+              <div class="quiz-option">Only buying stocks when the market is down</div>
+              <div class="quiz-option">Moving all your money into bonds when the market drops</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q6.</span> Warren Buffett recommends most people:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">Pick individual stocks based on research</div>
+              <div class="quiz-option">Hire a professional hedge fund manager</div>
+              <div class="quiz-option">Buy a low-cost S&P 500 index fund</div>
+              <div class="quiz-option">Wait for the market to crash before investing</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-result">
+            <div class="score">0/6</div>
+            <div class="score-label">Get all 6 correct to complete this module</div>
+            <button class="retry-btn">Try Again</button>
+          </div>
+        </section>
+      </div>
+      <div class="email-gate-box">
+        <h3>Unlock All 8 Modules — Free</h3>
+        <p>Enter your email to continue reading. No spam, no credit card — just learning.</p>
+        <form class="email-gate-form">
+          <input type="email" placeholder="you@example.com" required>
+          <button type="submit">Unlock Free</button>
+        </form>
+        <p class="email-gate-msg"></p>
+      </div>
+    </div>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+      <a href="reading-charts.html">&larr; Module 4: Reading Charts</a>
+      <a href="costs-and-taxes.html" class="nav-next">Module 6: Costs & Taxes &rarr;</a>
+    </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2026 Stock School. Educational content only — not financial advice.</p>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+  // Quiz data for Module 5
+  const quizData = [
+    { answer: 2, explanation: "Real risk is permanent loss of capital — like a company going bankrupt. Temporary price drops are volatility, which is normal and recoverable. Think of it as turbulence vs. a plane crash." },
+    { answer: 1, explanation: "False — owning 10 tech stocks means all your investments move together. If the tech sector drops 40%, all 10 drop. True diversification means different sectors, sizes, and countries." },
+    { answer: 2, explanation: "VOO tracks the S&P 500 (500 large companies). VTI tracks the entire US market — 4,000+ companies including small and mid-cap stocks. Both charge 0.03% in fees." },
+    { answer: 0, explanation: "The three-fund portfolio is US stocks (VTI) + international stocks (VXUS) + US bonds (BND). Three funds covering 15,000+ securities worldwide." },
+    { answer: 1, explanation: "Rebalancing means selling overweight winners and buying underweight laggards to return to your target allocation. It systematically enforces 'buy low, sell high.'" },
+    { answer: 2, explanation: "Buffett bet $1M that a simple S&P 500 index fund would beat hedge funds over 10 years — and won decisively (+125.8% vs +36%). He recommends low-cost index funds for most people." }
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    StockSchool.init({
+      moduleId: 'm5',
+      totalKps: 6,
+      quizData: quizData,
+      emailGate: true
+    });
+  });
+</script>
+</body>
+</html>

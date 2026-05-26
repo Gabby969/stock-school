@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PE Ratio, Market Cap &amp; EPS Explained Simply — Stock School</title>
+  <meta name="description" content="Learn what PE ratio, market cap, EPS, and expense ratio mean in plain English. Simple explanations with visual examples for stock market beginners.">
+  <link rel="canonical" href="https://stockschool.site/modules/key-metrics.html">
+  <meta property="og:title" content="PE Ratio, Market Cap & EPS Explained Simply — Stock School">
+  <meta property="og:description" content="PE ratio, market cap, EPS, expense ratio, dividend yield, 52-week high/low — explained with real-world analogies for beginners.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockschool.site/modules/key-metrics.html">
+  <meta property="og:image" content="https://stockschool.site/assets/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://stockschool.site/modules/key-metrics.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a PE ratio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PE ratio (Price-to-Earnings ratio) tells you how many years of current earnings it would take to pay back the stock price. It's calculated by dividing the stock price by earnings per share. A PE of 20 means at current earnings, it takes 20 years to earn back your investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is market cap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Market cap (market capitalization) is a company's total value on the stock market, calculated by multiplying share price by total number of shares. Companies are classified as mega-cap ($200B+), large-cap ($10-200B), mid-cap ($2-10B), small-cap ($300M-2B), or micro-cap (under $300M)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an expense ratio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An expense ratio is the annual fee charged by ETFs and mutual funds, expressed as a percentage of your investment. For example, VOO charges 0.03%, which means $3 per year on a $10,000 investment. Active funds often charge 1% or more, which costs dramatically more over time due to compounding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is EPS (Earnings Per Share)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EPS is a company's total profit divided by its total number of shares. If a company earned $10 billion and has 5 billion shares, EPS is $2. EPS is the 'E' in the PE ratio and is one of the most important metrics for evaluating a company's profitability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 52-week high and low mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 52-week high and low are the highest and lowest prices a stock has traded at during the past year. A stock near its 52-week low could be a bargain or a falling knife, while a stock near its high could signal momentum or overvaluation. Context matters — the number alone doesn't tell the full story."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Stock<span>School</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Modules</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+    <div class="nav-progress">
+      <span class="nav-progress-text">0/8 completed</span>
+      <div class="nav-progress-track">
+        <div class="nav-progress-fill"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Module Layout -->
+<div class="module-layout">
+  <!-- Sidebar -->
+  <aside class="module-sidebar">
+    <div class="sidebar-title">Module 2</div>
+    <a class="sidebar-item" data-kp="kp-pe"><span class="sidebar-icon pending"></span>PE Ratio</a>
+    <a class="sidebar-item" data-kp="kp-marketcap"><span class="sidebar-icon pending"></span>Market Cap</a>
+    <a class="sidebar-item" data-kp="kp-eps"><span class="sidebar-icon pending"></span>EPS</a>
+    <a class="sidebar-item" data-kp="kp-expense"><span class="sidebar-icon pending"></span>Expense Ratio</a>
+    <a class="sidebar-item" data-kp="kp-divyield"><span class="sidebar-icon pending"></span>Dividend Yield</a>
+    <a class="sidebar-item" data-kp="kp-52week"><span class="sidebar-icon pending"></span>52-Week High/Low</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="module-content">
+    <h1>Key Metrics Every Investor Should Know</h1>
+    <div class="module-meta">
+      <span>Module 2 of 8</span>
+      <span>6 concepts</span>
+      <span>~18 min read</span>
+    </div>
+
+    <!-- KP 1: PE Ratio -->
+    <article class="kp-card" id="kp-pe">
+      <h2>PE Ratio (Price-to-Earnings)</h2>
+      <p>The PE ratio answers one question: <strong>how many years of current earnings would it take to pay back the stock price?</strong></p>
+      <p>Formula: <strong>PE = Stock Price / Earnings Per Share</strong></p>
+
+      <!-- Inline SVG illustration -->
+      <svg width="100%" height="200" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="PE ratio visual: stock price $100 divided by EPS $5 equals PE of 20">
+        <!-- Stock Price box -->
+        <rect x="20" y="30" width="130" height="70" rx="10" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="85" y="55" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Stock Price</text>
+        <text x="85" y="80" text-anchor="middle" font-size="22" fill="#4a4543" font-weight="700">$100</text>
+        <!-- Division sign -->
+        <text x="175" y="72" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">/</text>
+        <!-- EPS box -->
+        <rect x="200" y="30" width="130" height="70" rx="10" fill="rgba(46,170,110,0.1)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="265" y="55" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">EPS (Earnings/Share)</text>
+        <text x="265" y="80" text-anchor="middle" font-size="22" fill="#4a4543" font-weight="700">$5</text>
+        <!-- Equals sign -->
+        <text x="355" y="72" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">=</text>
+        <!-- PE result -->
+        <rect x="380" y="30" width="120" height="70" rx="10" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="2"/>
+        <text x="440" y="55" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">PE Ratio</text>
+        <text x="440" y="80" text-anchor="middle" font-size="22" fill="#4a4543" font-weight="700">20</text>
+        <!-- Meaning -->
+        <rect x="20" y="120" width="480" height="60" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="260" y="148" text-anchor="middle" font-size="13" fill="#4a4543">PE of 20 = "At current earnings, it takes </text>
+        <text x="260" y="166" text-anchor="middle" font-size="13" fill="#d4930d" font-weight="600">20 years of profits to earn back your investment price"</text>
+      </svg>
+
+      <div class="analogy">
+        Imagine you're buying a pizza shop. It earns $50,000/year in profit and the owner wants $500,000 for it. That's a PE of 10 — it would take 10 years of earnings to pay back the purchase price. If they wanted $1,000,000, the PE would be 20. Higher PE = higher expectations for future growth.
+      </div>
+
+      <h3>What PE Numbers Mean</h3>
+      <ul>
+        <li><strong>PE of 10-15:</strong> Market thinks growth will be modest (value stocks, banks, utilities)</li>
+        <li><strong>PE of 20-30:</strong> Market expects solid growth (most S&P 500 companies)</li>
+        <li><strong>PE of 50+:</strong> Market expects explosive growth (high-growth tech companies)</li>
+        <li><strong>Negative PE:</strong> Company is losing money (no earnings to divide by)</li>
+      </ul>
+
+      <div class="warning-box">
+        A high PE doesn't automatically mean "overpriced" and a low PE doesn't mean "cheap." A company growing earnings at 40%/year might deserve a PE of 60. A company with shrinking earnings at PE 8 might be a trap.
+      </div>
+
+      <div class="book-ref">
+        Peter Lynch, <em>One Up on Wall Street</em>: Lynch categorized companies into 6 types — slow growers, stalwarts, fast growers, cyclicals, turnarounds, and asset plays — each with a different "normal" PE range. A fast grower at PE 20 might be cheap; a slow grower at PE 20 might be expensive.
+      </div>
+    </article>
+
+    <!-- KP 2: Market Cap -->
+    <article class="kp-card" id="kp-marketcap">
+      <h2>Market Capitalization (Market Cap)</h2>
+      <p>Market cap is a company's <strong>total "price tag"</strong> on the stock market.</p>
+      <p>Formula: <strong>Market Cap = Share Price x Total Number of Shares</strong></p>
+
+      <svg width="100%" height="220" viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Market cap size categories shown as buckets from mega-cap to micro-cap">
+        <!-- Size buckets, largest to smallest -->
+        <!-- Mega-cap -->
+        <rect x="20" y="15" width="95" height="100" rx="8" fill="rgba(91,143,217,0.12)" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="67" y="40" text-anchor="middle" font-size="10" fill="#5b8fd9" font-weight="700">MEGA</text>
+        <text x="67" y="56" text-anchor="middle" font-size="9" fill="#4a4543">$200B+</text>
+        <line x1="35" y1="66" x2="100" y2="66" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="67" y="80" text-anchor="middle" font-size="9" fill="#a09890">Apple</text>
+        <text x="67" y="93" text-anchor="middle" font-size="9" fill="#a09890">Microsoft</text>
+        <text x="67" y="106" text-anchor="middle" font-size="9" fill="#a09890">NVIDIA</text>
+        <!-- Large-cap -->
+        <rect x="125" y="30" width="90" height="85" rx="8" fill="rgba(46,170,110,0.1)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="170" y="52" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="700">LARGE</text>
+        <text x="170" y="66" text-anchor="middle" font-size="9" fill="#4a4543">$10-200B</text>
+        <line x1="138" y1="74" x2="202" y2="74" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="170" y="88" text-anchor="middle" font-size="9" fill="#a09890">Starbucks</text>
+        <text x="170" y="101" text-anchor="middle" font-size="9" fill="#a09890">FedEx</text>
+        <!-- Mid-cap -->
+        <rect x="225" y="45" width="85" height="70" rx="8" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5"/>
+        <text x="267" y="65" text-anchor="middle" font-size="10" fill="#d4930d" font-weight="700">MID</text>
+        <text x="267" y="79" text-anchor="middle" font-size="9" fill="#4a4543">$2-10B</text>
+        <line x1="238" y1="87" x2="297" y2="87" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="267" y="101" text-anchor="middle" font-size="9" fill="#a09890">Crocs, Roku</text>
+        <!-- Small-cap -->
+        <rect x="320" y="55" width="80" height="60" rx="8" fill="rgba(224,92,92,0.08)" stroke="#e05c5c" stroke-width="1.5"/>
+        <text x="360" y="75" text-anchor="middle" font-size="10" fill="#e05c5c" font-weight="700">SMALL</text>
+        <text x="360" y="89" text-anchor="middle" font-size="9" fill="#4a4543">$300M-2B</text>
+        <text x="360" y="105" text-anchor="middle" font-size="9" fill="#a09890">Growth stage</text>
+        <!-- Micro-cap -->
+        <rect x="410" y="65" width="80" height="50" rx="8" fill="rgba(160,152,144,0.1)" stroke="#a09890" stroke-width="1.5"/>
+        <text x="450" y="83" text-anchor="middle" font-size="10" fill="#a09890" font-weight="700">MICRO</text>
+        <text x="450" y="97" text-anchor="middle" font-size="9" fill="#4a4543">&lt;$300M</text>
+        <!-- Descending line to show size -->
+        <path d="M67 120 L170 120 L267 120 L360 120 L450 120" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+        <!-- Labels -->
+        <text x="260" y="145" text-anchor="middle" font-size="12" fill="#4a4543" font-weight="600">Bigger market cap = larger, more established company</text>
+        <!-- Example calculation -->
+        <rect x="20" y="160" width="480" height="48" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="260" y="181" text-anchor="middle" font-size="12" fill="#4a4543">Apple: $190/share x 15B shares = </text>
+        <text x="260" y="198" text-anchor="middle" font-size="13" fill="#5b8fd9" font-weight="700">$2.85 Trillion market cap (Mega-cap)</text>
+      </svg>
+
+      <div class="analogy">
+        Think of market cap like the total value of all apartments in a building. The share price is the price of one apartment, and the total number of shares is the number of apartments. A luxury high-rise (mega-cap) is worth more than a small duplex (micro-cap), but that doesn't automatically make it a better investment.
+      </div>
+
+      <h3>Why Market Cap Matters</h3>
+      <ul>
+        <li><strong>Mega/Large-cap:</strong> More stable, less volatile, often pay dividends. Think "blue chip."</li>
+        <li><strong>Mid-cap:</strong> Sweet spot of growth potential + some stability.</li>
+        <li><strong>Small/Micro-cap:</strong> Higher growth potential but also higher risk and volatility.</li>
+      </ul>
+
+      <div class="key-point">
+        Share price alone means nothing. A $500 stock isn't "more expensive" than a $20 stock — it depends on how many shares exist. Market cap tells you the actual size of the company.
+      </div>
+    </article>
+
+    <!-- KP 3: EPS -->
+    <article class="kp-card" id="kp-eps">
+      <h2>EPS (Earnings Per Share)</h2>
+      <p>EPS tells you <strong>how much profit the company made for each share</strong> — think of it as "profit per slice."</p>
+      <p>Formula: <strong>EPS = Total Net Profit / Total Number of Shares</strong></p>
+
+      <svg width="100%" height="170" viewBox="0 0 520 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="EPS calculation: $10 billion profit divided by 5 billion shares equals $2 EPS">
+        <!-- Profit box -->
+        <rect x="20" y="20" width="140" height="70" rx="10" fill="rgba(46,170,110,0.08)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="90" y="45" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Total Net Profit</text>
+        <text x="90" y="72" text-anchor="middle" font-size="20" fill="#4a4543" font-weight="700">$10 Billion</text>
+        <!-- Division -->
+        <text x="185" y="62" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">/</text>
+        <!-- Shares box -->
+        <rect x="210" y="20" width="140" height="70" rx="10" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="280" y="45" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Total Shares</text>
+        <text x="280" y="72" text-anchor="middle" font-size="20" fill="#4a4543" font-weight="700">5 Billion</text>
+        <!-- Equals -->
+        <text x="373" y="62" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">=</text>
+        <!-- EPS result -->
+        <rect x="395" y="20" width="105" height="70" rx="10" fill="rgba(212,147,13,0.12)" stroke="#d4930d" stroke-width="2"/>
+        <text x="447" y="45" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">EPS</text>
+        <text x="447" y="72" text-anchor="middle" font-size="22" fill="#4a4543" font-weight="700">$2.00</text>
+        <!-- Connection to PE -->
+        <rect x="20" y="110" width="480" height="45" rx="8" fill="rgba(212,147,13,0.06)" stroke="#d4930d" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="260" y="130" text-anchor="middle" font-size="12" fill="#4a4543">This is the "E" in PE ratio.</text>
+        <text x="260" y="146" text-anchor="middle" font-size="12" fill="#d4930d" font-weight="600">If the stock trades at $40 and EPS is $2, then PE = $40 / $2 = 20</text>
+      </svg>
+
+      <h3>Why EPS Matters</h3>
+      <ul>
+        <li>EPS is the <strong>single most-watched number</strong> in earnings season</li>
+        <li>Rising EPS = company is getting more profitable (good signal)</li>
+        <li>Falling EPS = profits are shrinking (warning sign)</li>
+        <li>Analysts forecast EPS each quarter — "beat" or "miss" moves stock prices</li>
+      </ul>
+
+      <div class="analogy">
+        If a pizza generates $10,000 in profit and is cut into 1,000 slices, each slice earned $10. That's EPS. If next year the pizza earns $12,000 with the same slices, EPS goes up to $12 — your slice is more valuable.
+      </div>
+
+      <div class="key-point">
+        When you see "Company XYZ beat earnings expectations," it usually means their actual EPS was higher than what analysts predicted. This often causes the stock price to jump.
+      </div>
+    </article>
+
+    <!-- KP 4: Expense Ratio -->
+    <article class="kp-card" id="kp-expense">
+      <h2>Expense Ratio (Fund Fees)</h2>
+      <p>The expense ratio is the <strong>annual fee</strong> that ETFs and mutual funds charge to manage your money, expressed as a percentage of your investment.</p>
+
+      <svg width="100%" height="260" viewBox="0 0 520 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Expense ratio comparison: VOO 0.03% vs active fund 1% over 30 years">
+        <!-- VOO side -->
+        <rect x="20" y="15" width="230" height="90" rx="10" fill="rgba(46,170,110,0.08)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="135" y="38" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">VOO (Index ETF)</text>
+        <text x="135" y="58" text-anchor="middle" font-size="11" fill="#4a4543">Expense ratio: 0.03%</text>
+        <text x="135" y="76" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="600">$3/year on $10,000</text>
+        <text x="135" y="96" text-anchor="middle" font-size="10" fill="#a09890">Total cost over 30 years: ~$2,700</text>
+        <!-- Active fund side -->
+        <rect x="270" y="15" width="230" height="90" rx="10" fill="rgba(224,92,92,0.06)" stroke="#e05c5c" stroke-width="2"/>
+        <text x="385" y="38" text-anchor="middle" font-size="13" fill="#e05c5c" font-weight="700">Typical Active Fund</text>
+        <text x="385" y="58" text-anchor="middle" font-size="11" fill="#4a4543">Expense ratio: 1.00%</text>
+        <text x="385" y="76" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="600">$100/year on $10,000</text>
+        <text x="385" y="96" text-anchor="middle" font-size="10" fill="#a09890">Total cost over 30 years: ~$43,000</text>
+        <!-- VS -->
+        <text x="260" y="58" text-anchor="middle" font-size="14" fill="#a09890" font-weight="700">vs</text>
+        <!-- Compound cost bar chart -->
+        <text x="260" y="130" text-anchor="middle" font-size="12" fill="#4a4543" font-weight="600">$10,000 invested at 10% annual return over 30 years</text>
+        <!-- Bar chart -->
+        <text x="80" y="158" text-anchor="middle" font-size="10" fill="#a09890">10 yrs</text>
+        <text x="220" y="158" text-anchor="middle" font-size="10" fill="#a09890">20 yrs</text>
+        <text x="400" y="158" text-anchor="middle" font-size="10" fill="#a09890">30 yrs</text>
+        <!-- 10 year bars -->
+        <rect x="45" y="165" width="30" height="35" rx="3" fill="#2eaa6e"/>
+        <rect x="80" y="170" width="30" height="30" rx="3" fill="#e05c5c"/>
+        <text x="60" y="210" text-anchor="middle" font-size="8" fill="#2eaa6e">$25.7K</text>
+        <text x="95" y="210" text-anchor="middle" font-size="8" fill="#e05c5c">$23.7K</text>
+        <!-- 20 year bars -->
+        <rect x="185" y="165" width="30" height="55" rx="3" fill="#2eaa6e"/>
+        <rect x="220" y="180" width="30" height="40" rx="3" fill="#e05c5c"/>
+        <text x="200" y="230" text-anchor="middle" font-size="8" fill="#2eaa6e">$66K</text>
+        <text x="235" y="230" text-anchor="middle" font-size="8" fill="#e05c5c">$56K</text>
+        <!-- 30 year bars -->
+        <rect x="365" y="160" width="30" height="80" rx="3" fill="#2eaa6e"/>
+        <rect x="400" y="190" width="30" height="50" rx="3" fill="#e05c5c"/>
+        <text x="380" y="248" text-anchor="middle" font-size="8" fill="#2eaa6e">$171K</text>
+        <text x="415" y="248" text-anchor="middle" font-size="8" fill="#e05c5c">$132K</text>
+        <!-- Difference callout -->
+        <text x="460" y="185" font-size="10" fill="#e05c5c" font-weight="600">-$39K</text>
+        <text x="460" y="198" font-size="9" fill="#a09890">lost to fees!</text>
+      </svg>
+
+      <p>The fee is automatically deducted — you never see a bill. It's silently shaved off your returns every day. That's why it's so dangerous: it feels invisible but compounds into tens of thousands over your investing life.</p>
+
+      <h3>Quick Reference</h3>
+      <ul>
+        <li><strong>0.03%</strong> (VOO, VTI) — Rock bottom. Index funds are this cheap.</li>
+        <li><strong>0.20%</strong> — Still low. Most passive ETFs live here.</li>
+        <li><strong>0.50-1.0%</strong> — Actively managed funds. Hard to justify unless performance is exceptional.</li>
+        <li><strong>1.5%+</strong> — Expensive. Most studies show active funds rarely beat index funds after fees.</li>
+      </ul>
+
+      <div class="key-point">
+        Expense ratio is the one investment metric you can fully control. You can't control market returns, but you CAN choose a 0.03% fund over a 1% fund. Over 30 years, that difference alone could mean $40,000+ more in your pocket.
+      </div>
+
+      <div class="book-ref">
+        Philip Fisher, <em>Common Stocks and Uncommon Profits</em>: Fisher taught that quantitative metrics like fees tell part of the story. But the qualitative factors — management quality, competitive advantage, growth potential — are what separate good investments from great ones. Numbers alone aren't enough.
+      </div>
+    </article>
+
+    <!-- KP 5: Dividend Yield -->
+    <article class="kp-card" id="kp-divyield">
+      <h2>Dividend Yield</h2>
+      <p>Dividend yield tells you <strong>how much cash income a stock pays relative to its price</strong> — it's the "interest rate" of owning a stock.</p>
+      <p>Formula: <strong>Dividend Yield = (Annual Dividend / Stock Price) x 100</strong></p>
+
+      <svg width="100%" height="170" viewBox="0 0 520 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Dividend yield calculation: $3 annual dividend on $100 stock equals 3% yield">
+        <!-- Dividend box -->
+        <rect x="20" y="20" width="130" height="70" rx="10" fill="rgba(46,170,110,0.08)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="85" y="45" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Annual Dividend</text>
+        <text x="85" y="72" text-anchor="middle" font-size="20" fill="#4a4543" font-weight="700">$3.00</text>
+        <!-- Division -->
+        <text x="175" y="62" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">/</text>
+        <!-- Stock price -->
+        <rect x="200" y="20" width="130" height="70" rx="10" fill="rgba(91,143,217,0.1)" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="265" y="45" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Stock Price</text>
+        <text x="265" y="72" text-anchor="middle" font-size="20" fill="#4a4543" font-weight="700">$100</text>
+        <!-- Equals -->
+        <text x="355" y="62" text-anchor="middle" font-size="24" fill="#a09890" font-weight="700">=</text>
+        <!-- Yield result -->
+        <rect x="380" y="20" width="120" height="70" rx="10" fill="rgba(212,147,13,0.12)" stroke="#d4930d" stroke-width="2"/>
+        <text x="440" y="45" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">Dividend Yield</text>
+        <text x="440" y="72" text-anchor="middle" font-size="22" fill="#4a4543" font-weight="700">3.0%</text>
+        <!-- Warning about high yield -->
+        <rect x="20" y="110" width="480" height="48" rx="8" fill="rgba(224,92,92,0.05)" stroke="#e05c5c" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="260" y="130" text-anchor="middle" font-size="11" fill="#4a4543">If the stock drops to $50 while still paying $3, yield becomes 6%</text>
+        <text x="260" y="148" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Higher yield isn't always better -- the price may have dropped for a bad reason</text>
+      </svg>
+
+      <h3>Typical Yield Ranges</h3>
+      <ul>
+        <li><strong>0%:</strong> Growth companies that reinvest all profit (Amazon, Tesla)</li>
+        <li><strong>1-2%:</strong> Most S&P 500 stocks (average is ~1.3%)</li>
+        <li><strong>3-5%:</strong> "Income stocks" — utilities, REITs, established blue chips</li>
+        <li><strong>7%+:</strong> Suspiciously high — could mean the company is in trouble and the price has crashed</li>
+      </ul>
+
+      <div class="warning-box">
+        A dividend yield of 8% sounds amazing — until you realize the stock dropped 50% and might cut the dividend next quarter. Always check why the yield is so high before buying.
+      </div>
+
+      <div class="key-point">
+        Dividend yield gives you "passive income" from stocks without selling them. For long-term investors, reinvesting dividends to buy more shares is one of the most powerful wealth-building strategies — it compounds your returns on top of price appreciation.
+      </div>
+    </article>
+
+    <!-- KP 6: 52-Week High/Low -->
+    <article class="kp-card" id="kp-52week">
+      <h2>52-Week High/Low</h2>
+      <p>The <strong>52-week high</strong> and <strong>52-week low</strong> are the highest and lowest prices a stock has traded at during the past year. They give you context for where the current price sits in recent history.</p>
+
+      <svg width="100%" height="180" viewBox="0 0 520 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="52-week range showing high, low, and current price on a scale">
+        <!-- Range line -->
+        <line x1="60" y1="60" x2="460" y2="60" stroke="#e5e0d8" stroke-width="3" stroke-linecap="round"/>
+        <!-- Low marker -->
+        <circle cx="60" cy="60" r="8" fill="#e05c5c"/>
+        <text x="60" y="45" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">52-wk Low</text>
+        <text x="60" y="82" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">$85</text>
+        <!-- High marker -->
+        <circle cx="460" cy="60" r="8" fill="#2eaa6e"/>
+        <text x="460" y="45" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">52-wk High</text>
+        <text x="460" y="82" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">$155</text>
+        <!-- Current price marker -->
+        <line x1="300" y1="40" x2="300" y2="80" stroke="#5b8fd9" stroke-width="2"/>
+        <circle cx="300" cy="60" r="6" fill="#5b8fd9"/>
+        <text x="300" y="32" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Current: $130</text>
+        <!-- Filled range -->
+        <rect x="60" y="56" width="240" height="8" rx="4" fill="rgba(91,143,217,0.2)"/>
+        <!-- Context boxes below -->
+        <rect x="20" y="105" width="230" height="60" rx="8" fill="rgba(46,170,110,0.06)" stroke="#2eaa6e" stroke-width="1"/>
+        <text x="135" y="125" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Near 52-week HIGH</text>
+        <text x="135" y="142" text-anchor="middle" font-size="10" fill="#4a4543">Could mean: momentum, strong business</text>
+        <text x="135" y="156" text-anchor="middle" font-size="10" fill="#a09890">Or: overvalued, due for pullback</text>
+        <rect x="270" y="105" width="230" height="60" rx="8" fill="rgba(224,92,92,0.06)" stroke="#e05c5c" stroke-width="1"/>
+        <text x="385" y="125" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Near 52-week LOW</text>
+        <text x="385" y="142" text-anchor="middle" font-size="10" fill="#4a4543">Could mean: bargain opportunity</text>
+        <text x="385" y="156" text-anchor="middle" font-size="10" fill="#a09890">Or: falling knife, real problems</text>
+      </svg>
+
+      <h3>How to Use the 52-Week Range</h3>
+      <ul>
+        <li>It shows <strong>context</strong>, not a buy/sell signal by itself</li>
+        <li>A stock can make a new 52-week high and keep going higher (momentum)</li>
+        <li>A stock can hit a 52-week low and keep dropping (deteriorating fundamentals)</li>
+        <li>Combine with other metrics (PE, EPS growth) for a fuller picture</li>
+      </ul>
+
+      <div class="analogy">
+        The 52-week range is like checking a house's price history. If it was $500K last year and now it's $350K, is it a deal or is the neighborhood declining? The price drop alone doesn't give you the answer — you need to investigate why.
+      </div>
+
+      <div class="warning-box">
+        "Buy low, sell high" sounds simple, but a stock near its 52-week low isn't always a bargain. It could be low because the company is losing money, facing lawsuits, or its industry is shrinking. Always ask WHY it's at that level.
+      </div>
+
+      <div class="book-ref">
+        Peter Lynch, <em>One Up on Wall Street</em>: "Know what you own and know why you own it." Numbers like the 52-week range are starting points, not conclusions. The real work is understanding the business behind the number.
+      </div>
+    </article>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+      <h2>Module 2 Quiz</h2>
+      <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px;">Answer all correctly to complete this module. You can retry as many times as you want.</p>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q1.</span> A PE ratio of 25 means...</p>
+        <div class="quiz-options">
+          <div class="quiz-option">The stock price is $25</div>
+          <div class="quiz-option">At current earnings, it takes 25 years to earn back your investment price</div>
+          <div class="quiz-option">The company has 25 million shares</div>
+          <div class="quiz-option">The company's profit grew 25% last year</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q2.</span> A company worth $500 billion is classified as:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Mega-cap</div>
+          <div class="quiz-option">Large-cap</div>
+          <div class="quiz-option">Mid-cap</div>
+          <div class="quiz-option">Small-cap</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q3.</span> EPS (Earnings Per Share) is calculated by:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Multiplying stock price by total shares</div>
+          <div class="quiz-option">Dividing stock price by annual revenue</div>
+          <div class="quiz-option">Dividing total profit by total number of shares</div>
+          <div class="quiz-option">Subtracting expenses from revenue</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q4.</span> VOO's expense ratio is 0.03%. On a $10,000 investment, the annual fee is:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">$3</div>
+          <div class="quiz-option">$30</div>
+          <div class="quiz-option">$300</div>
+          <div class="quiz-option">$0.30</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q5.</span> A dividend yield of 4% on a $200 stock means the annual dividend is:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">$4</div>
+          <div class="quiz-option">$8</div>
+          <div class="quiz-option">$20</div>
+          <div class="quiz-option">$40</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q6.</span> A stock near its 52-week low is always:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">A great buy — it's "on sale"</div>
+          <div class="quiz-option">About to bounce back up</div>
+          <div class="quiz-option">Going to zero — time to sell</div>
+          <div class="quiz-option">None of the above — it could be a bargain or a falling knife</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-result">
+        <div class="score">0/6</div>
+        <div class="score-label">Get all 6 correct to complete this module</div>
+        <button class="retry-btn">Try Again</button>
+      </div>
+    </section>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+      <a href="what-is-the-stock-market.html">&larr; Module 1: Stock Market Basics</a>
+      <a href="how-trading-works.html" class="nav-next">Module 3: How Trading Works &rarr;</a>
+    </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2026 Stock School. Educational content only — not financial advice.</p>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+  // Quiz data for Module 2
+  const quizData = [
+    { answer: 1, explanation: "PE ratio = Price / Earnings Per Share. A PE of 25 means at the company's current rate of earnings, it would take 25 years to earn back the stock price. Higher PE = higher growth expectations." },
+    { answer: 0, explanation: "Mega-cap companies have a market cap of $200 billion or more. At $500B, this company is firmly in mega-cap territory — think Apple, Microsoft, NVIDIA." },
+    { answer: 2, explanation: "EPS = Total Net Profit / Total Number of Shares. It tells you how much profit the company generated per share — the 'E' in PE ratio." },
+    { answer: 0, explanation: "0.03% of $10,000 = $3 per year. That's why index ETFs like VOO are so popular — the fees are almost nothing compared to active funds charging $100/year on the same amount." },
+    { answer: 1, explanation: "Dividend Yield = Annual Dividend / Stock Price. So 4% of $200 = $8 per year in dividends. You'd receive this cash just for holding the stock." },
+    { answer: 3, explanation: "A 52-week low gives you context, not a conclusion. The stock could be undervalued (bargain) or could be falling for very good reasons (deteriorating business). You need to investigate why." }
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    StockSchool.init({
+      moduleId: 'm2',
+      totalKps: 6,
+      quizData: quizData
+    });
+  });
+</script>
+</body>
+</html>

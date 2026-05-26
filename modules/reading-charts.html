@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Read Stock Charts for Beginners: Candlesticks, Volume, MACD — Stock School</title>
+  <meta name="description" content="Learn to read stock charts step by step. Candlestick patterns, moving averages, volume, support and resistance explained with interactive visuals for beginners.">
+  <link rel="canonical" href="https://stockschool.site/modules/reading-charts.html">
+  <meta property="og:title" content="How to Read Stock Charts for Beginners — Stock School">
+  <meta property="og:description" content="Interactive guide to candlestick charts, moving averages, volume, and technical indicators. Click, explore, and learn.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockschool.site/modules/reading-charts.html">
+  <meta property="og:image" content="https://stockschool.site/assets/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://stockschool.site/modules/reading-charts.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you read a candlestick chart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each candlestick shows four prices: Open, High, Low, Close. The thick body shows open-to-close range. Green/white means price went up (close > open). Red/black means price went down (close < open). The thin lines (wicks) show the highest and lowest prices reached during that period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a moving average in stocks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A moving average smooths out price data by calculating the average closing price over a set number of days. A 50-day moving average adds up the last 50 closing prices and divides by 50. It helps you see the overall trend direction without daily noise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does volume mean in stocks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Volume is the number of shares traded during a time period. High volume means lots of people are buying and selling — the price move is 'confirmed' by strong participation. Low volume price moves are less reliable. Think of volume as conviction behind a price move."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are support and resistance levels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Support is a price level where a stock tends to stop falling — like a floor. Resistance is a price level where a stock tends to stop rising — like a ceiling. These form because many traders remember these prices and act on them, creating self-fulfilling patterns."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* Module 4 specific: interactive chart area */
+    .interactive-chart {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+    .chart-canvas-wrap {
+      position: relative;
+      width: 100%;
+      overflow-x: auto;
+    }
+    .chart-canvas-wrap canvas {
+      display: block;
+      max-width: 100%;
+    }
+    .chart-controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .chart-controls label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .chart-controls input[type="checkbox"] {
+      accent-color: var(--accent);
+    }
+    .chart-info-bar {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .chart-info-bar .val-up { color: var(--green); }
+    .chart-info-bar .val-down { color: var(--red); }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Stock<span>School</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Modules</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+    <div class="nav-progress">
+      <span class="nav-progress-text">0/8 completed</span>
+      <div class="nav-progress-track">
+        <div class="nav-progress-fill"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="module-layout">
+  <!-- Sidebar -->
+  <aside class="module-sidebar">
+    <div class="sidebar-title">Module 4</div>
+    <a class="sidebar-item" data-kp="kp-candlestick"><span class="sidebar-icon pending"></span>Candlestick Basics</a>
+    <a class="sidebar-item" data-kp="kp-patterns"><span class="sidebar-icon pending"></span>Candlestick Patterns</a>
+    <a class="sidebar-item" data-kp="kp-volume"><span class="sidebar-icon pending"></span>Volume</a>
+    <a class="sidebar-item" data-kp="kp-ma"><span class="sidebar-icon pending"></span>Moving Averages</a>
+    <a class="sidebar-item" data-kp="kp-support"><span class="sidebar-icon pending"></span>Support & Resistance</a>
+    <a class="sidebar-item" data-kp="kp-macd"><span class="sidebar-icon pending"></span>MACD</a>
+    <a class="sidebar-item" data-kp="kp-rsi"><span class="sidebar-icon pending"></span>RSI</a>
+    <a class="sidebar-item" data-kp="kp-longterm"><span class="sidebar-icon pending"></span>Charts for Long-Term</a>
+  </aside>
+
+  <main class="module-content">
+    <h1>Reading Stock Charts</h1>
+    <div class="module-meta">
+      <span>Module 4 of 8</span>
+      <span>8 concepts + interactive chart</span>
+      <span>~25 min read</span>
+    </div>
+
+    <!-- Interactive Chart Demo -->
+    <div class="interactive-chart">
+      <div class="chart-info-bar">
+        <span><strong>QQQ</strong> (Nasdaq 100 ETF)</span>
+        <span>Simulated Daily Chart</span>
+        <span id="chartHover">Hover over candles to see OHLC data</span>
+      </div>
+      <div class="chart-controls">
+        <label><input type="checkbox" id="toggleMA5" checked> <span style="color:#d4930d;">MA5</span></label>
+        <label><input type="checkbox" id="toggleMA20" checked> <span style="color:#b34dd1;">MA20</span></label>
+        <label><input type="checkbox" id="toggleVolume" checked> Volume</label>
+      </div>
+      <div class="chart-canvas-wrap">
+        <canvas id="stockChart" width="700" height="360"></canvas>
+      </div>
+    </div>
+
+    <!-- KP 1: Candlestick Basics -->
+    <article class="kp-card" id="kp-candlestick">
+      <h2>Candlestick Basics</h2>
+      <p>Each "candle" on a chart represents one time period (1 day, 1 week, etc.) and shows <strong>four prices</strong>:</p>
+
+      <svg width="100%" height="280" viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Anatomy of a candlestick: green bullish and red bearish candles with labeled parts">
+        <!-- Green (bullish) candle -->
+        <text x="130" y="20" text-anchor="middle" font-size="14" fill="#2eaa6e" font-weight="700">Bullish (Up Day)</text>
+        <!-- Upper wick -->
+        <line x1="130" y1="35" x2="130" y2="80" stroke="#2eaa6e" stroke-width="2"/>
+        <!-- Body -->
+        <rect x="105" y="80" width="50" height="100" rx="3" fill="rgba(46,170,110,0.2)" stroke="#2eaa6e" stroke-width="2"/>
+        <!-- Lower wick -->
+        <line x1="130" y1="180" x2="130" y2="230" stroke="#2eaa6e" stroke-width="2"/>
+        <!-- Labels -->
+        <line x1="160" y1="35" x2="200" y2="35" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="205" y="39" font-size="12" fill="#4a4543">High</text>
+        <line x1="160" y1="80" x2="200" y2="80" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="205" y="84" font-size="12" fill="#2eaa6e" font-weight="600">Close (top)</text>
+        <line x1="160" y1="180" x2="200" y2="180" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="205" y="184" font-size="12" fill="#2eaa6e" font-weight="600">Open (bottom)</text>
+        <line x1="160" y1="230" x2="200" y2="230" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="205" y="234" font-size="12" fill="#4a4543">Low</text>
+        <!-- Body label -->
+        <text x="60" y="125" font-size="11" fill="#a09890" text-anchor="end">Body</text>
+        <path d="M65 120 L100 120" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="60" y="55" font-size="11" fill="#a09890" text-anchor="end">Wick</text>
+        <path d="M65 52 L125 52" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+        <text x="60" y="215" font-size="11" fill="#a09890" text-anchor="end">Wick</text>
+        <path d="M65 212 L125 212" stroke="#a09890" stroke-width="1" stroke-dasharray="3 2"/>
+
+        <!-- Red (bearish) candle -->
+        <text x="400" y="20" text-anchor="middle" font-size="14" fill="#e05c5c" font-weight="700">Bearish (Down Day)</text>
+        <line x1="400" y1="35" x2="400" y2="80" stroke="#e05c5c" stroke-width="2"/>
+        <rect x="375" y="80" width="50" height="100" rx="3" fill="rgba(224,92,92,0.2)" stroke="#e05c5c" stroke-width="2"/>
+        <line x1="400" y1="180" x2="400" y2="230" stroke="#e05c5c" stroke-width="2"/>
+        <!-- Labels (reversed: open at top, close at bottom) -->
+        <text x="360" y="84" font-size="12" fill="#e05c5c" font-weight="600" text-anchor="end">Open (top)</text>
+        <text x="360" y="184" font-size="12" fill="#e05c5c" font-weight="600" text-anchor="end">Close (bottom)</text>
+
+        <!-- Summary -->
+        <text x="250" y="265" text-anchor="middle" font-size="13" fill="#4a4543">Green = price went UP | Red = price went DOWN</text>
+      </svg>
+
+      <h3>Reading a Candle</h3>
+      <ul>
+        <li><strong>Open:</strong> The price when the market opened</li>
+        <li><strong>Close:</strong> The price when the market closed</li>
+        <li><strong>High:</strong> The highest price reached during the day</li>
+        <li><strong>Low:</strong> The lowest price reached during the day</li>
+      </ul>
+
+      <div class="analogy">
+        Think of each candle as a mini story of one trading day. The body tells you "who won" (buyers or sellers). The wicks tell you "how hard the fight was" (how far prices swung before settling).
+      </div>
+
+      <div class="key-point">
+        A long green body = strong buying pressure. A long red body = strong selling pressure. Long wicks = indecision or reversal. Short body with long wicks = tug-of-war.
+      </div>
+    </article>
+
+    <!-- KP 2: Common Patterns -->
+    <article class="kp-card" id="kp-patterns">
+      <h2>Common Candlestick Patterns</h2>
+      <p>Certain candle shapes appear repeatedly and hint at what might happen next:</p>
+
+      <svg width="100%" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Four common candlestick patterns: Doji, Hammer, Engulfing, and Shooting Star">
+        <!-- Doji -->
+        <rect x="20" y="10" width="120" height="200" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="80" y="35" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">Doji</text>
+        <line x1="80" y1="60" x2="80" y2="90" stroke="#5b8fd9" stroke-width="2"/>
+        <line x1="65" y1="100" x2="95" y2="100" stroke="#5b8fd9" stroke-width="3"/>
+        <line x1="80" y1="110" x2="80" y2="140" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="80" y="165" text-anchor="middle" font-size="11" fill="#a09890">Open = Close</text>
+        <text x="80" y="182" text-anchor="middle" font-size="11" fill="#5b8fd9" font-weight="600">Indecision</text>
+        <text x="80" y="198" text-anchor="middle" font-size="10" fill="#a09890">Trend may reverse</text>
+
+        <!-- Hammer -->
+        <rect x="160" y="10" width="120" height="200" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="220" y="35" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">Hammer</text>
+        <rect x="207" y="60" width="26" height="20" rx="2" fill="rgba(46,170,110,0.3)" stroke="#2eaa6e" stroke-width="2"/>
+        <line x1="220" y1="80" x2="220" y2="140" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="220" y="165" text-anchor="middle" font-size="11" fill="#a09890">Small body, long lower wick</text>
+        <text x="220" y="182" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Bullish reversal</text>
+        <text x="220" y="198" text-anchor="middle" font-size="10" fill="#a09890">Sellers tried, buyers won</text>
+
+        <!-- Engulfing -->
+        <rect x="300" y="10" width="120" height="200" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="360" y="35" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">Bullish Engulfing</text>
+        <!-- Small red candle -->
+        <rect x="338" y="75" width="16" height="30" rx="2" fill="rgba(224,92,92,0.3)" stroke="#e05c5c" stroke-width="1.5"/>
+        <line x1="346" y1="65" x2="346" y2="75" stroke="#e05c5c" stroke-width="1.5"/>
+        <line x1="346" y1="105" x2="346" y2="115" stroke="#e05c5c" stroke-width="1.5"/>
+        <!-- Large green candle -->
+        <rect x="358" y="60" width="22" height="60" rx="2" fill="rgba(46,170,110,0.3)" stroke="#2eaa6e" stroke-width="2"/>
+        <line x1="369" y1="50" x2="369" y2="60" stroke="#2eaa6e" stroke-width="1.5"/>
+        <line x1="369" y1="120" x2="369" y2="130" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="360" y="165" text-anchor="middle" font-size="11" fill="#a09890">Big green swallows red</text>
+        <text x="360" y="182" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Strong reversal signal</text>
+        <text x="360" y="198" text-anchor="middle" font-size="10" fill="#a09890">Buyers took over</text>
+
+        <!-- Shooting Star -->
+        <rect x="440" y="10" width="120" height="200" rx="8" fill="#f0ede6" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="500" y="35" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="700">Shooting Star</text>
+        <line x1="500" y1="55" x2="500" y2="110" stroke="#e05c5c" stroke-width="2"/>
+        <rect x="487" y="110" width="26" height="20" rx="2" fill="rgba(224,92,92,0.3)" stroke="#e05c5c" stroke-width="2"/>
+        <line x1="500" y1="130" x2="500" y2="140" stroke="#e05c5c" stroke-width="2"/>
+        <text x="500" y="165" text-anchor="middle" font-size="11" fill="#a09890">Small body, long upper wick</text>
+        <text x="500" y="182" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Bearish reversal</text>
+        <text x="500" y="198" text-anchor="middle" font-size="10" fill="#a09890">Buyers tried, sellers won</text>
+
+        <!-- Footer note -->
+        <text x="300" y="240" text-anchor="middle" font-size="12" fill="#a09890">Patterns are hints, not guarantees. Always consider the broader context.</text>
+        <text x="300" y="258" text-anchor="middle" font-size="12" fill="#5b8fd9">Try spotting these patterns in the interactive chart above!</text>
+      </svg>
+
+      <div class="warning-box">
+        No pattern works 100% of the time. These are probabilistic signals, not crystal balls. Professional traders use patterns alongside other indicators and context — never in isolation.
+      </div>
+
+      <p><strong>For long-term investors:</strong> You don't need to memorize dozens of patterns. Understanding the basic candle anatomy (KP1) is enough. The patterns above are "nice to know" — they won't change your buy-and-hold strategy.</p>
+
+      <div class="book-ref">
+        John Murphy's <em>Technical Analysis of the Financial Markets</em>: The definitive reference for chart patterns. Over 500 pages — but for most investors, the first 3 chapters cover 90% of what you need.
+      </div>
+    </article>
+
+    <!-- KP 3: Volume -->
+    <article class="kp-card" id="kp-volume">
+      <h2>Volume: The Crowd Behind the Move</h2>
+      <p>Volume is the <strong>number of shares traded</strong> during a time period. It answers: "How many people participated in this price move?"</p>
+
+      <svg width="100%" height="200" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="High volume confirms price moves, low volume suggests weakness">
+        <!-- Price line going up with high volume -->
+        <text x="130" y="20" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">Strong: Price Up + High Volume</text>
+        <path d="M30 100 L70 95 L110 80 L150 65 L190 50 L230 40" stroke="#2eaa6e" stroke-width="2.5" fill="none"/>
+        <!-- Volume bars underneath -->
+        <rect x="30" y="120" width="25" height="40" rx="2" fill="rgba(46,170,110,0.3)"/>
+        <rect x="70" y="115" width="25" height="45" rx="2" fill="rgba(46,170,110,0.3)"/>
+        <rect x="110" y="105" width="25" height="55" rx="2" fill="rgba(46,170,110,0.4)"/>
+        <rect x="150" y="100" width="25" height="60" rx="2" fill="rgba(46,170,110,0.5)"/>
+        <rect x="190" y="90" width="25" height="70" rx="2" fill="rgba(46,170,110,0.6)"/>
+        <text x="130" y="185" text-anchor="middle" font-size="11" fill="#2eaa6e">Confirmed — many buyers agree</text>
+
+        <!-- Price line going up with low volume -->
+        <text x="390" y="20" text-anchor="middle" font-size="13" fill="#d4930d" font-weight="700">Weak: Price Up + Low Volume</text>
+        <path d="M290 100 L330 95 L370 82 L410 70 L450 60 L490 52" stroke="#d4930d" stroke-width="2.5" fill="none" stroke-dasharray="5 3"/>
+        <!-- Volume bars - small -->
+        <rect x="290" y="145" width="25" height="15" rx="2" fill="rgba(212,147,13,0.2)"/>
+        <rect x="330" y="147" width="25" height="13" rx="2" fill="rgba(212,147,13,0.2)"/>
+        <rect x="370" y="150" width="25" height="10" rx="2" fill="rgba(212,147,13,0.15)"/>
+        <rect x="410" y="148" width="25" height="12" rx="2" fill="rgba(212,147,13,0.15)"/>
+        <rect x="450" y="151" width="25" height="9" rx="2" fill="rgba(212,147,13,0.1)"/>
+        <text x="390" y="185" text-anchor="middle" font-size="11" fill="#d4930d">Suspicious — few buyers, move may not last</text>
+      </svg>
+
+      <h3>Volume Rules of Thumb</h3>
+      <ul>
+        <li><strong>Price up + high volume</strong> = healthy rally, likely to continue</li>
+        <li><strong>Price up + low volume</strong> = weak rally, might reverse</li>
+        <li><strong>Price down + high volume</strong> = strong selling, could continue falling</li>
+        <li><strong>Price down + low volume</strong> = could be a shakeout, might bounce</li>
+      </ul>
+
+      <div class="analogy">
+        Volume is like votes in an election. If a candidate wins with 90% turnout, it's a mandate. If they win with 10% turnout, it's a weak victory that might not stick.
+      </div>
+
+      <div class="key-point">
+        Volume confirms conviction. A big price move on tiny volume is like applause from 3 people — not very convincing.
+      </div>
+    </article>
+
+    <!-- KP 4: Moving Averages -->
+    <article class="kp-card" id="kp-ma">
+      <h2>Moving Averages (MA)</h2>
+      <p>A moving average <strong>smooths out daily noise</strong> to show the trend direction. It calculates the average closing price over the past N days.</p>
+
+      <svg width="100%" height="200" viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Moving average smooths out price noise to show the trend">
+        <!-- Noisy price line -->
+        <path d="M30 120 L50 100 L65 115 L80 90 L100 105 L120 85 L140 95 L155 70 L175 80 L190 65 L210 75 L230 55 L250 68 L270 50 L290 60 L310 45 L330 55 L350 40 L370 50 L390 38 L410 45 L430 30 L450 40 L470 32 L490 38" stroke="#e5e0d8" stroke-width="1.5" fill="none"/>
+        <!-- MA line (smooth) -->
+        <path d="M80 108 L120 98 L160 87 L200 76 L240 66 L280 58 L320 52 L360 47 L400 43 L440 39 L480 36" stroke="#5b8fd9" stroke-width="2.5" fill="none"/>
+        <!-- Labels -->
+        <text x="490" y="55" font-size="11" fill="#5b8fd9" font-weight="600">MA20</text>
+        <text x="490" y="25" font-size="10" fill="#a09890">Price</text>
+        <!-- Annotation -->
+        <text x="260" y="165" text-anchor="middle" font-size="12" fill="#4a4543">Gray = daily price (noisy) | Blue = MA20 (smooth trend)</text>
+        <text x="260" y="185" text-anchor="middle" font-size="12" fill="#5b8fd9">When price is ABOVE the MA, the trend is generally UP</text>
+      </svg>
+
+      <h3>Common Moving Averages</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:14px; margin:12px 0;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border);">
+            <th style="text-align:left; padding:8px;">MA Period</th>
+            <th style="text-align:left; padding:8px;">What It Shows</th>
+            <th style="text-align:left; padding:8px;">Used For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px; color:#d4930d; font-weight:600;">MA5 / MA10</td>
+            <td style="padding:8px;">Very short-term trend</td>
+            <td style="padding:8px;">Day/swing traders</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px; color:#5b8fd9; font-weight:600;">MA20 / MA50</td>
+            <td style="padding:8px;">Medium-term trend</td>
+            <td style="padding:8px;">Identifying trend direction</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; color:#b34dd1; font-weight:600;">MA200</td>
+            <td style="padding:8px;">Long-term trend</td>
+            <td style="padding:8px;">Bull vs bear market indicator</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Golden Cross & Death Cross</h3>
+      <ul>
+        <li><strong>Golden Cross:</strong> Short MA (50) crosses ABOVE long MA (200) — bullish signal</li>
+        <li><strong>Death Cross:</strong> Short MA (50) crosses BELOW long MA (200) — bearish signal</li>
+      </ul>
+
+      <div class="key-point">
+        <strong>For long-term investors:</strong> The MA200 is the only one that really matters. If the S&P 500 is above its 200-day moving average, the long-term trend is up. That's it — you don't need to memorize every crossover pattern.
+      </div>
+    </article>
+
+    <!-- KP 5: Support & Resistance -->
+    <article class="kp-card" id="kp-support">
+      <h2>Support & Resistance</h2>
+      <p>These are <strong>price levels</strong> where the stock tends to "bounce" or "stall":</p>
+
+      <svg width="100%" height="220" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Support acts as a floor, resistance acts as a ceiling for stock prices">
+        <!-- Resistance line -->
+        <line x1="40" y1="50" x2="460" y2="50" stroke="#e05c5c" stroke-width="2" stroke-dasharray="6 3"/>
+        <text x="470" y="54" font-size="12" fill="#e05c5c" font-weight="600">Resistance (ceiling)</text>
+        <!-- Support line -->
+        <line x1="40" y1="170" x2="460" y2="170" stroke="#2eaa6e" stroke-width="2" stroke-dasharray="6 3"/>
+        <text x="470" y="174" font-size="12" fill="#2eaa6e" font-weight="600">Support (floor)</text>
+        <!-- Price bouncing between -->
+        <path d="M60 165 L100 130 L130 80 L150 55 L170 65 L200 120 L230 165 L260 140 L290 70 L310 55 L330 70 L360 130 L390 160 L420 110 L450 60" stroke="#5b8fd9" stroke-width="2" fill="none"/>
+        <!-- Bounce markers at support -->
+        <circle cx="60" cy="165" r="4" fill="#2eaa6e"/>
+        <circle cx="230" cy="165" r="4" fill="#2eaa6e"/>
+        <circle cx="390" cy="160" r="4" fill="#2eaa6e"/>
+        <!-- Rejection markers at resistance -->
+        <circle cx="150" cy="55" r="4" fill="#e05c5c"/>
+        <circle cx="310" cy="55" r="4" fill="#e05c5c"/>
+        <!-- Labels -->
+        <text x="60" y="200" font-size="11" fill="#2eaa6e">Bounce</text>
+        <text x="230" y="200" font-size="11" fill="#2eaa6e">Bounce</text>
+        <text x="150" y="42" font-size="11" fill="#e05c5c">Rejected</text>
+        <text x="310" y="42" font-size="11" fill="#e05c5c">Rejected</text>
+      </svg>
+
+      <ul>
+        <li><strong>Support:</strong> A price floor — the stock has bounced up from this level multiple times</li>
+        <li><strong>Resistance:</strong> A price ceiling — the stock has been pushed back down from this level multiple times</li>
+      </ul>
+
+      <div class="analogy">
+        Support is like a trampoline: prices bounce off it. Resistance is like a glass ceiling: prices keep hitting it and falling back. When the price finally BREAKS through resistance, it often becomes the new support (the ceiling becomes the floor).
+      </div>
+
+      <div class="key-point">
+        <strong>For long-term investors:</strong> Support and resistance matter more for traders. If you're buying and holding for 10 years, these short-term levels won't affect your outcome. Nice to understand, not essential to act on.
+      </div>
+    </article>
+
+    <!-- KP 6: MACD -->
+    <article class="kp-card" id="kp-macd">
+      <h2>MACD (Moving Average Convergence Divergence)</h2>
+      <p>MACD measures <strong>momentum</strong> — is the trend speeding up or slowing down?</p>
+
+      <svg width="100%" height="180" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="MACD shows momentum through the relationship between two moving averages">
+        <!-- Zero line -->
+        <line x1="40" y1="90" x2="460" y2="90" stroke="#e5e0d8" stroke-width="1"/>
+        <text x="35" y="94" font-size="10" fill="#a09890" text-anchor="end">0</text>
+        <!-- MACD line -->
+        <path d="M60 110 L100 100 L140 85 L180 65 L220 55 L260 60 L300 75 L340 90 L380 100 L420 105 L450 95" stroke="#5b8fd9" stroke-width="2" fill="none"/>
+        <!-- Signal line -->
+        <path d="M60 105 L100 102 L140 92 L180 78 L220 65 L260 62 L300 72 L340 85 L380 95 L420 100 L450 98" stroke="#d4930d" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+        <!-- Histogram bars -->
+        <rect x="58" y="90" width="12" height="18" fill="rgba(224,92,92,0.3)"/>
+        <rect x="98" y="90" width="12" height="8" fill="rgba(224,92,92,0.2)"/>
+        <rect x="138" y="83" width="12" height="7" fill="rgba(46,170,110,0.2)"/>
+        <rect x="178" y="65" width="12" height="25" fill="rgba(46,170,110,0.4)"/>
+        <rect x="218" y="55" width="12" height="35" fill="rgba(46,170,110,0.5)"/>
+        <rect x="258" y="60" width="12" height="30" fill="rgba(46,170,110,0.3)"/>
+        <rect x="298" y="72" width="12" height="18" fill="rgba(224,92,92,0.2)"/>
+        <rect x="338" y="85" width="12" height="5" fill="rgba(224,92,92,0.3)"/>
+        <rect x="378" y="90" width="12" height="10" fill="rgba(224,92,92,0.3)"/>
+        <!-- Legend -->
+        <line x1="60" y1="160" x2="80" y2="160" stroke="#5b8fd9" stroke-width="2"/>
+        <text x="85" y="164" font-size="11" fill="#5b8fd9">MACD Line</text>
+        <line x1="170" y1="160" x2="190" y2="160" stroke="#d4930d" stroke-width="2" stroke-dasharray="4 2"/>
+        <text x="195" y="164" font-size="11" fill="#d4930d">Signal Line</text>
+        <rect x="290" y="155" width="12" height="10" fill="rgba(46,170,110,0.3)"/>
+        <text x="307" y="164" font-size="11" fill="#4a4543">Histogram</text>
+      </svg>
+
+      <h3>How to Read MACD</h3>
+      <ul>
+        <li><strong>MACD above signal line:</strong> Momentum is bullish (upward)</li>
+        <li><strong>MACD below signal line:</strong> Momentum is bearish (downward)</li>
+        <li><strong>MACD crosses above signal:</strong> Bullish crossover (buy signal)</li>
+        <li><strong>MACD crosses below signal:</strong> Bearish crossover (sell signal)</li>
+      </ul>
+
+      <div class="key-point">
+        <strong>For long-term investors:</strong> MACD is a trading tool. If you're buying VOO and holding for 10 years, MACD signals won't improve your returns. Understand the concept, but don't trade based on it.
+      </div>
+    </article>
+
+    <!-- KP 7: RSI -->
+    <article class="kp-card" id="kp-rsi">
+      <h2>RSI (Relative Strength Index)</h2>
+      <p>RSI measures how <strong>overbought or oversold</strong> a stock is on a scale of 0-100.</p>
+
+      <svg width="100%" height="160" viewBox="0 0 500 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="RSI scale from 0-100: below 30 is oversold, above 70 is overbought">
+        <!-- Background zones -->
+        <rect x="40" y="15" width="420" height="25" rx="4" fill="rgba(224,92,92,0.1)"/>
+        <rect x="40" y="40" width="420" height="50" rx="0" fill="rgba(46,170,110,0.04)"/>
+        <rect x="40" y="90" width="420" height="25" rx="4" fill="rgba(46,170,110,0.1)"/>
+        <!-- Scale markers -->
+        <text x="35" y="30" text-anchor="end" font-size="12" fill="#e05c5c" font-weight="600">70+</text>
+        <text x="35" y="70" text-anchor="end" font-size="12" fill="#4a4543">30-70</text>
+        <text x="35" y="107" text-anchor="end" font-size="12" fill="#2eaa6e" font-weight="600">30-</text>
+        <!-- Labels -->
+        <text x="250" y="30" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="600">OVERBOUGHT — might drop soon</text>
+        <text x="250" y="70" text-anchor="middle" font-size="12" fill="#4a4543">Normal range</text>
+        <text x="250" y="107" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="600">OVERSOLD — might bounce soon</text>
+        <!-- RSI line example -->
+        <path d="M50 65 L90 55 L130 35 L170 25 L210 40 L250 60 L290 75 L330 95 L370 105 L410 90 L450 70" stroke="#b34dd1" stroke-width="2" fill="none"/>
+        <!-- Threshold lines -->
+        <line x1="40" y1="40" x2="460" y2="40" stroke="#e05c5c" stroke-width="1" stroke-dasharray="4 3"/>
+        <line x1="40" y1="90" x2="460" y2="90" stroke="#2eaa6e" stroke-width="1" stroke-dasharray="4 3"/>
+        <!-- Annotations -->
+        <circle cx="170" cy="25" r="4" fill="#e05c5c"/>
+        <text x="170" y="140" text-anchor="middle" font-size="11" fill="#e05c5c">Overbought here — price dropped after</text>
+        <circle cx="370" cy="105" r="4" fill="#2eaa6e"/>
+        <text x="370" y="140" text-anchor="middle" font-size="11" fill="#2eaa6e">Oversold here — price bounced after</text>
+      </svg>
+
+      <h3>RSI Reading</h3>
+      <ul>
+        <li><strong>Above 70:</strong> Overbought — stock might be due for a pullback</li>
+        <li><strong>Below 30:</strong> Oversold — stock might be due for a bounce</li>
+        <li><strong>Between 30-70:</strong> Normal — no extreme signal</li>
+      </ul>
+
+      <div class="warning-box">
+        RSI can stay above 70 for weeks in a strong uptrend, or below 30 for weeks in a crash. It's a hint, not a guarantee. Strong stocks can stay "overbought" much longer than you expect.
+      </div>
+
+      <div class="key-point">
+        <strong>For long-term investors:</strong> Like MACD, RSI is mainly useful for traders. If you're dollar-cost averaging into index funds, RSI signals won't change your strategy. Worth understanding, not worth acting on.
+      </div>
+    </article>
+
+    <!-- KP 8: Charts for Long-Term -->
+    <article class="kp-card" id="kp-longterm">
+      <h2>How Charts Help Long-Term Investors</h2>
+      <p>After learning all these indicators, here's the honest truth:</p>
+
+      <svg width="100%" height="140" viewBox="0 0 500 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Most chart tools are for traders, not long-term investors">
+        <!-- Spectrum bar -->
+        <rect x="40" y="40" width="420" height="40" rx="8" fill="none" stroke="#e5e0d8" stroke-width="1"/>
+        <!-- Gradient fill -->
+        <rect x="40" y="40" width="140" height="40" rx="8" fill="rgba(224,92,92,0.12)"/>
+        <rect x="180" y="40" width="140" height="40" fill="rgba(212,147,13,0.1)"/>
+        <rect x="320" y="40" width="140" height="40" rx="8" fill="rgba(46,170,110,0.1)"/>
+        <!-- Labels on spectrum -->
+        <text x="110" y="65" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Day Trading</text>
+        <text x="250" y="65" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">Swing Trading</text>
+        <text x="390" y="65" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Long-Term Investing</text>
+        <!-- What matters -->
+        <text x="110" y="100" text-anchor="middle" font-size="10" fill="#a09890">RSI, MACD, patterns</text>
+        <text x="110" y="115" text-anchor="middle" font-size="10" fill="#a09890">support/resistance</text>
+        <text x="250" y="100" text-anchor="middle" font-size="10" fill="#a09890">MA crossovers</text>
+        <text x="250" y="115" text-anchor="middle" font-size="10" fill="#a09890">volume, trends</text>
+        <text x="390" y="100" text-anchor="middle" font-size="10" fill="#2eaa6e">Just the basics:</text>
+        <text x="390" y="115" text-anchor="middle" font-size="10" fill="#2eaa6e">overall trend, MA200</text>
+      </svg>
+
+      <h3>What Long-Term Investors Actually Need from Charts</h3>
+      <ol>
+        <li><strong>Overall trend direction</strong> — Is the market generally going up over years? (Answer: historically, yes)</li>
+        <li><strong>MA200 as a health check</strong> — If the S&P 500 is above its 200-day MA, the long-term trend is intact</li>
+        <li><strong>Context during crashes</strong> — Charts showing historical recoveries help you stay calm</li>
+      </ol>
+
+      <h3>What Long-Term Investors DON'T Need</h3>
+      <ul>
+        <li>Daily candlestick analysis</li>
+        <li>RSI/MACD trading signals</li>
+        <li>Support/resistance day trading</li>
+        <li>Chart pattern prediction</li>
+      </ul>
+
+      <div class="key-point">
+        Understanding charts makes you a more informed investor. But for a long-term buy-and-hold strategy, the best chart is the one you check once a quarter — not the one you obsess over daily.
+      </div>
+
+      <div class="book-ref">
+        John Murphy's <em>Technical Analysis of the Financial Markets</em>: Even Murphy himself acknowledges that technical analysis is most useful for timing decisions, not for evaluating the fundamental worth of investments.
+      </div>
+    </article>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+      <h2>Module 4 Quiz</h2>
+      <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px;">Answer all correctly to complete this module.</p>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q1.</span> A green candlestick means:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">The stock went up compared to yesterday</div>
+          <div class="quiz-option">The closing price was higher than the opening price that day</div>
+          <div class="quiz-option">More buyers than sellers</div>
+          <div class="quiz-option">The stock hit a new high</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q2.</span> A Hammer candlestick pattern suggests:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Continued downtrend</div>
+          <div class="quiz-option">Possible bullish reversal — sellers tried but buyers won</div>
+          <div class="quiz-option">The market is closed</div>
+          <div class="quiz-option">High volume</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q3.</span> High volume during a price rise means:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">The rise is confirmed by strong participation</div>
+          <div class="quiz-option">The rise is weak</div>
+          <div class="quiz-option">The stock is overpriced</div>
+          <div class="quiz-option">A crash is coming</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q4.</span> The 200-day moving average is used to assess:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Daily trading signals</div>
+          <div class="quiz-option">The long-term trend direction</div>
+          <div class="quiz-option">Dividend payments</div>
+          <div class="quiz-option">Company earnings</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q5.</span> Support level is best described as:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">A price ceiling the stock can't break above</div>
+          <div class="quiz-option">A price floor where the stock tends to bounce up</div>
+          <div class="quiz-option">The average price over 50 days</div>
+          <div class="quiz-option">The highest price ever reached</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q6.</span> RSI above 70 suggests the stock is:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Cheap and undervalued</div>
+          <div class="quiz-option">Overbought — might be due for a pullback</div>
+          <div class="quiz-option">About to pay a dividend</div>
+          <div class="quiz-option">Going bankrupt</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-question-block">
+        <p class="quiz-q-text"><span class="quiz-q-num">Q7.</span> For a long-term buy-and-hold investor, the most useful chart tool is:</p>
+        <div class="quiz-options">
+          <div class="quiz-option">Daily RSI signals</div>
+          <div class="quiz-option">MACD crossovers</div>
+          <div class="quiz-option">Overall trend direction and MA200</div>
+          <div class="quiz-option">Candlestick patterns</div>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-result">
+        <div class="score">0/7</div>
+        <div class="score-label">Get all 7 correct to complete this module</div>
+        <button class="retry-btn">Try Again</button>
+      </div>
+    </section>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+      <a href="how-trading-works.html">&larr; Module 3: How Trading Works</a>
+      <a href="risk-and-diversification.html" class="nav-next">Module 5: Risk & Diversification &rarr;</a>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Stock School. Educational content only — not financial advice.</p>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+// ===== Interactive Stock Chart (Canvas) =====
+(function() {
+  // Generate simulated QQQ-like daily data
+  function generateData(days) {
+    const data = [];
+    let price = 480;
+    for (let i = 0; i < days; i++) {
+      const change = (Math.random() - 0.48) * 8;
+      const open = price;
+      const close = price + change;
+      const high = Math.max(open, close) + Math.random() * 4;
+      const low = Math.min(open, close) - Math.random() * 4;
+      const volume = 30000000 + Math.random() * 40000000 + (Math.abs(change) > 4 ? 30000000 : 0);
+      data.push({ open, high, low, close, volume, day: i });
+      price = close;
+    }
+    return data;
+  }
+
+  const data = generateData(60);
+  const canvas = document.getElementById('stockChart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const padding = { top: 20, right: 60, bottom: 60, left: 10 };
+  const chartH = H - padding.top - padding.bottom - 80; // leave room for volume
+  const volH = 60;
+  const volTop = H - padding.bottom - volH;
+
+  // Calculate MAs
+  function calcMA(period) {
+    return data.map((d, i) => {
+      if (i < period - 1) return null;
+      let sum = 0;
+      for (let j = i - period + 1; j <= i; j++) sum += data[j].close;
+      return sum / period;
+    });
+  }
+  const ma5 = calcMA(5);
+  const ma20 = calcMA(20);
+
+  const allPrices = data.flatMap(d => [d.high, d.low]);
+  const minP = Math.min(...allPrices) - 5;
+  const maxP = Math.max(...allPrices) + 5;
+  const maxVol = Math.max(...data.map(d => d.volume));
+
+  const candleW = (W - padding.left - padding.right) / data.length;
+
+  let showMA5 = true, showMA20 = true, showVol = true;
+
+  function priceY(p) {
+    return padding.top + (1 - (p - minP) / (maxP - minP)) * chartH;
+  }
+  function volY(v) {
+    return volTop + volH - (v / maxVol) * volH;
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid lines
+    ctx.strokeStyle = '#f0ede6';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+      const y = padding.top + (chartH / 4) * i;
+      ctx.beginPath(); ctx.moveTo(padding.left, y); ctx.lineTo(W - padding.right, y); ctx.stroke();
+      const p = maxP - ((maxP - minP) / 4) * i;
+      ctx.fillStyle = '#a09890';
+      ctx.font = '11px -apple-system, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText('$' + p.toFixed(0), W - padding.right + 5, y + 4);
+    }
+
+    // Volume bars
+    if (showVol) {
+      data.forEach((d, i) => {
+        const x = padding.left + i * candleW + candleW * 0.15;
+        const w = candleW * 0.7;
+        const y = volY(d.volume);
+        const h = volTop + volH - y;
+        ctx.fillStyle = d.close >= d.open ? 'rgba(46,170,110,0.25)' : 'rgba(224,92,92,0.2)';
+        ctx.fillRect(x, y, w, h);
+      });
+    }
+
+    // Candles
+    data.forEach((d, i) => {
+      const x = padding.left + i * candleW + candleW / 2;
+      const bodyX = padding.left + i * candleW + candleW * 0.2;
+      const bodyW = candleW * 0.6;
+      const up = d.close >= d.open;
+      const color = up ? '#2eaa6e' : '#e05c5c';
+
+      // Wick
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(x, priceY(d.high));
+      ctx.lineTo(x, priceY(d.low));
+      ctx.stroke();
+
+      // Body
+      const bodyTop = priceY(Math.max(d.open, d.close));
+      const bodyBot = priceY(Math.min(d.open, d.close));
+      const bodyH = Math.max(bodyBot - bodyTop, 1);
+      ctx.fillStyle = up ? 'rgba(46,170,110,0.6)' : 'rgba(224,92,92,0.5)';
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.fillRect(bodyX, bodyTop, bodyW, bodyH);
+      ctx.strokeRect(bodyX, bodyTop, bodyW, bodyH);
+    });
+
+    // MA lines
+    function drawMA(maData, color) {
+      ctx.beginPath();
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.5;
+      let started = false;
+      maData.forEach((v, i) => {
+        if (v === null) return;
+        const x = padding.left + i * candleW + candleW / 2;
+        const y = priceY(v);
+        if (!started) { ctx.moveTo(x, y); started = true; }
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+    }
+    if (showMA5) drawMA(ma5, '#d4930d');
+    if (showMA20) drawMA(ma20, '#b34dd1');
+  }
+
+  draw();
+
+  // Toggle controls
+  document.getElementById('toggleMA5').addEventListener('change', function() { showMA5 = this.checked; draw(); });
+  document.getElementById('toggleMA20').addEventListener('change', function() { showMA20 = this.checked; draw(); });
+  document.getElementById('toggleVolume').addEventListener('change', function() { showVol = this.checked; draw(); });
+
+  // Hover tooltip
+  canvas.addEventListener('mousemove', function(e) {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const idx = Math.floor((mx - padding.left) / candleW);
+    if (idx >= 0 && idx < data.length) {
+      const d = data[idx];
+      const info = document.getElementById('chartHover');
+      if (info) {
+        const color = d.close >= d.open ? 'val-up' : 'val-down';
+        info.innerHTML = `O: $${d.open.toFixed(2)} &nbsp; H: $${d.high.toFixed(2)} &nbsp; L: $${d.low.toFixed(2)} &nbsp; C: <span class="${color}">$${d.close.toFixed(2)}</span> &nbsp; Vol: ${(d.volume/1e6).toFixed(1)}M`;
+      }
+    }
+  });
+  canvas.addEventListener('mouseleave', function() {
+    const info = document.getElementById('chartHover');
+    if (info) info.textContent = 'Hover over candles to see OHLC data';
+  });
+})();
+
+// Quiz data
+const quizData = [
+  { answer: 1, explanation: "A green candle means the closing price was higher than the opening price for that specific day. It doesn't compare to yesterday." },
+  { answer: 1, explanation: "A Hammer has a small body at the top with a long lower wick — sellers pushed the price down but buyers fought back and won." },
+  { answer: 0, explanation: "High volume confirms conviction. Many participants are buying, which makes the price rise more reliable." },
+  { answer: 1, explanation: "The 200-day MA shows the long-term trend direction. It's the most important MA for long-term investors." },
+  { answer: 1, explanation: "Support is a price floor where the stock has historically bounced back up multiple times." },
+  { answer: 1, explanation: "RSI above 70 indicates the stock may be overbought — it's risen a lot recently and might pull back. But it's not guaranteed." },
+  { answer: 2, explanation: "For buy-and-hold investors, the overall trend direction and MA200 are the only chart tools that really matter." }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  StockSchool.init({ moduleId: 'm4', totalKps: 8, quizData: quizData });
+});
+</script>
+</body>
+</html>

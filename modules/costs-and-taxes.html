@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Fees & Taxes Explained: Expense Ratio, Capital Gains — Stock School</title>
+  <meta name="description" content="Learn about expense ratios, trading commissions, capital gains taxes, and hidden costs that eat your returns. Simple tax guide for stock market beginners.">
+  <link rel="canonical" href="https://stockschool.site/modules/costs-and-taxes.html">
+  <meta property="og:title" content="Stock Market Fees & Taxes Explained: Expense Ratio, Capital Gains — Stock School">
+  <meta property="og:description" content="Expense ratios, commissions, capital gains taxes, and hidden costs — explained simply for stock market beginners.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stockschool.site/modules/costs-and-taxes.html">
+  <meta property="og:image" content="https://stockschool.site/assets/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://stockschool.site/modules/costs-and-taxes.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an expense ratio and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An expense ratio is the annual fee a fund charges, expressed as a percentage of your investment. A seemingly small difference matters enormously over time: on $100,000 invested for 30 years at 10% return, a 0.03% fee costs about $2,700, while a 1% fee costs roughly $395,000 — a difference of nearly $393,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to pay commissions to buy stocks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most major US brokers (Fidelity, Schwab, Robinhood) now charge $0 per trade. This is a huge change from the 1990s when trades cost $30-50 each. Some international brokers still charge $1-10 per trade, so always check before signing up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the bid-ask spread?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The bid-ask spread is the difference between the highest price a buyer will pay (bid) and the lowest price a seller will accept (ask). Every time you trade, you lose a small amount to this spread. It's a hidden cost that adds up, especially with frequent trading or illiquid stocks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between short-term and long-term capital gains tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In the US, if you sell a stock held for less than 1 year, the profit is taxed as ordinary income (up to 37%). If you hold for more than 1 year, you pay the lower long-term capital gains rate (0%, 15%, or 20% depending on income). Holding longer means paying less tax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does frequent trading hurt investment returns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Studies consistently show that the more often people trade, the worse their returns. Every trade has costs: spreads, possible commissions, and tax events. Vanguard data famously showed their best-performing accounts belonged to people who forgot they had accounts."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Stock<span>School</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Modules</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+    <div class="nav-progress">
+      <span class="nav-progress-text">0/8 completed</span>
+      <div class="nav-progress-track">
+        <div class="nav-progress-fill"></div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Module Layout -->
+<div class="module-layout">
+  <!-- Sidebar -->
+  <aside class="module-sidebar">
+    <div class="sidebar-title">Module 6</div>
+    <a class="sidebar-item" data-kp="kp-expense-impact"><span class="sidebar-icon pending"></span>Expense Ratio Impact</a>
+    <a class="sidebar-item" data-kp="kp-commissions"><span class="sidebar-icon pending"></span>Trading Commissions</a>
+    <a class="sidebar-item" data-kp="kp-bidask"><span class="sidebar-icon pending"></span>Bid-Ask Spread</a>
+    <a class="sidebar-item" data-kp="kp-capitalgains"><span class="sidebar-icon pending"></span>Capital Gains Tax</a>
+    <a class="sidebar-item" data-kp="kp-taxloss"><span class="sidebar-icon pending"></span>Tax-Loss Harvesting</a>
+    <a class="sidebar-item" data-kp="kp-frequency"><span class="sidebar-icon pending"></span>Cost of Frequent Trading</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="module-content">
+    <h1>Costs & Taxes</h1>
+    <div class="module-meta">
+      <span>Module 6 of 8</span>
+      <span>6 concepts</span>
+      <span>~12 min read</span>
+    </div>
+
+    <!-- KP 1: Expense Ratio Long-Term Impact -->
+    <article class="kp-card" id="kp-expense-impact">
+      <h2>The Expense Ratio: A "Small" Fee That Costs $395,000</h2>
+      <p>Every fund (ETF, index fund, mutual fund) charges an <strong>expense ratio</strong> -- an annual fee taken as a percentage of your investment. It sounds tiny. It's not.</p>
+
+      <p>Let's compare two investors. Both invest $100,000 for 30 years at 10% annual return. The only difference is the fee:</p>
+
+      <!-- SVG Bar Chart: Expense Ratio Comparison -->
+      <svg width="100%" height="320" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Bar chart comparing 0.03% vs 1% expense ratio over 30 years on $100k">
+        <!-- Title -->
+        <text x="250" y="24" text-anchor="middle" font-size="13" fill="#4a4543" font-weight="600">$100,000 invested for 30 years at 10% return</text>
+
+        <!-- Y-axis labels -->
+        <text x="55" y="70" text-anchor="end" font-size="11" fill="#a09890">$1.8M</text>
+        <text x="55" y="115" text-anchor="end" font-size="11" fill="#a09890">$1.5M</text>
+        <text x="55" y="160" text-anchor="end" font-size="11" fill="#a09890">$1.2M</text>
+        <text x="55" y="205" text-anchor="end" font-size="11" fill="#a09890">$0.9M</text>
+        <text x="55" y="250" text-anchor="end" font-size="11" fill="#a09890">$0.6M</text>
+
+        <!-- Grid lines -->
+        <line x1="65" y1="66" x2="460" y2="66" stroke="#e5e0d8" stroke-width="0.5"/>
+        <line x1="65" y1="111" x2="460" y2="111" stroke="#e5e0d8" stroke-width="0.5"/>
+        <line x1="65" y1="156" x2="460" y2="156" stroke="#e5e0d8" stroke-width="0.5"/>
+        <line x1="65" y1="201" x2="460" y2="201" stroke="#e5e0d8" stroke-width="0.5"/>
+        <line x1="65" y1="246" x2="460" y2="246" stroke="#e5e0d8" stroke-width="0.5"/>
+
+        <!-- Baseline -->
+        <line x1="65" y1="270" x2="460" y2="270" stroke="#e5e0d8" stroke-width="1.5"/>
+
+        <!-- Bar 1: 0.03% fee — ~$1,720,000 -->
+        <rect x="110" y="78" width="100" height="192" rx="4" fill="rgba(46,170,110,0.15)" stroke="#2eaa6e" stroke-width="2"/>
+        <text x="160" y="100" text-anchor="middle" font-size="16" fill="#2eaa6e" font-weight="700">$1.72M</text>
+        <text x="160" y="118" text-anchor="middle" font-size="11" fill="#4a4543">You keep</text>
+        <!-- Fee portion for 0.03% -->
+        <rect x="110" y="68" width="100" height="10" rx="4" fill="rgba(46,170,110,0.3)" stroke="#2eaa6e" stroke-width="1"/>
+        <text x="160" y="60" text-anchor="middle" font-size="10" fill="#2eaa6e">Fees: $2,700</text>
+
+        <!-- Bar 2: 1% fee — ~$1,325,000 -->
+        <rect x="290" y="128" width="100" height="142" rx="4" fill="rgba(224,92,92,0.12)" stroke="#e05c5c" stroke-width="2"/>
+        <text x="340" y="152" text-anchor="middle" font-size="16" fill="#e05c5c" font-weight="700">$1.33M</text>
+        <text x="340" y="170" text-anchor="middle" font-size="11" fill="#4a4543">You keep</text>
+        <!-- Fee portion for 1% -->
+        <rect x="290" y="68" width="100" height="60" rx="4" fill="rgba(224,92,92,0.25)" stroke="#e05c5c" stroke-width="1" stroke-dasharray="4 2"/>
+        <text x="340" y="95" text-anchor="middle" font-size="11" fill="#e05c5c" font-weight="600">Fees: $395k</text>
+        <text x="340" y="110" text-anchor="middle" font-size="10" fill="#e05c5c">eaten by fees!</text>
+
+        <!-- Labels below bars -->
+        <text x="160" y="290" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="600">0.03% fee (VOO)</text>
+        <text x="340" y="290" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="600">1.00% fee (typical mutual fund)</text>
+
+        <!-- Difference callout -->
+        <line x1="220" y1="98" x2="280" y2="148" stroke="#d4930d" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <rect x="380" y="195" width="85" height="50" rx="6" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5"/>
+        <text x="422" y="215" text-anchor="middle" font-size="10" fill="#d4930d" font-weight="600">DIFFERENCE</text>
+        <text x="422" y="235" text-anchor="middle" font-size="14" fill="#d4930d" font-weight="700">$395,000</text>
+      </svg>
+
+      <div class="analogy">
+        It's like two identical roads from A to B. One has a tiny toll ($0.03 per $100 driven); the other has a bigger toll ($1 per $100 driven). Over a 30-year road trip, the bigger toll eats nearly $400,000 of your journey's fuel.
+      </div>
+
+      <h3>Real-World Expense Ratios</h3>
+      <ul>
+        <li><strong>VOO (S&P 500 ETF):</strong> 0.03% -- among the cheapest available</li>
+        <li><strong>QQQ (Nasdaq 100 ETF):</strong> 0.20% -- still low</li>
+        <li><strong>Average mutual fund:</strong> 0.5-1.5% -- costs you tens or hundreds of thousands over decades</li>
+      </ul>
+
+      <div class="key-point">
+        The expense ratio is the single most important number when choosing a fund. A 0.97% difference in fees can cost you nearly $400,000 over 30 years. Always check the expense ratio before investing.
+      </div>
+    </article>
+
+    <!-- KP 2: Trading Commissions -->
+    <article class="kp-card" id="kp-commissions">
+      <h2>Trading Commissions: The Cost Per Trade</h2>
+      <p>A commission is the <strong>fee your broker charges every time you buy or sell</strong> a stock or ETF. Good news: for most US brokers, this is now $0.</p>
+
+      <svg width="100%" height="140" viewBox="0 0 500 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Commission costs then vs now: $30-50 in the 1990s, $0 today">
+        <!-- Then: 1990s -->
+        <rect x="20" y="15" width="200" height="100" rx="10" fill="rgba(224,92,92,0.06)" stroke="#e05c5c" stroke-width="1.5"/>
+        <text x="120" y="40" text-anchor="middle" font-size="13" fill="#e05c5c" font-weight="700">1990s</text>
+        <text x="120" y="62" text-anchor="middle" font-size="22" fill="#e05c5c" font-weight="700">$30-50</text>
+        <text x="120" y="80" text-anchor="middle" font-size="11" fill="#4a4543">per trade</text>
+        <text x="120" y="100" text-anchor="middle" font-size="10" fill="#a09890">10 trades/month = $300-500</text>
+        <!-- Now -->
+        <rect x="280" y="15" width="200" height="100" rx="10" fill="rgba(46,170,110,0.06)" stroke="#2eaa6e" stroke-width="1.5"/>
+        <text x="380" y="40" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">Today</text>
+        <text x="380" y="62" text-anchor="middle" font-size="22" fill="#2eaa6e" font-weight="700">$0</text>
+        <text x="380" y="80" text-anchor="middle" font-size="11" fill="#4a4543">per trade</text>
+        <text x="380" y="100" text-anchor="middle" font-size="10" fill="#a09890">Fidelity, Schwab, Robinhood</text>
+        <!-- Arrow -->
+        <path d="M225 65 L275 65" stroke="#e5e0d8" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="275,61 283,65 275,69" fill="#e5e0d8"/>
+      </svg>
+
+      <h3>Check Your Broker</h3>
+      <ul>
+        <li><strong>$0 commission:</strong> Fidelity, Schwab, Robinhood, Webull, most US brokers</li>
+        <li><strong>$1-10 per trade:</strong> Some international brokers (Interactive Brokers charges $1 for non-US markets, Futu charges HK$3-15)</li>
+        <li><strong>$30-50 per trade:</strong> This was standard in the 1990s. The industry revolution brought it to zero.</li>
+      </ul>
+
+      <div class="warning-box">
+        "Zero commissions" doesn't mean "zero cost." Brokers make money other ways -- payment for order flow, margin lending, premium features. But for a buy-and-hold investor, $0 commissions are a genuine win.
+      </div>
+
+      <div class="key-point">
+        Most US brokers are commission-free now. But if you use an international broker, always check fees before your first trade. Even $5/trade adds up if you trade frequently.
+      </div>
+    </article>
+
+    <!-- EMAIL GATE: After 2nd KP, remaining content gated -->
+    <div class="email-gate-overlay" id="emailGate">
+      <div class="email-gate-blur">
+
+        <!-- KP 3: Bid-Ask Spread -->
+        <article class="kp-card" id="kp-bidask">
+          <h2>The Bid-Ask Spread: A Hidden Cost in Every Trade</h2>
+          <p>Every stock has two prices at any given moment:</p>
+          <ul>
+            <li><strong>Bid price:</strong> The highest price a buyer is willing to pay right now</li>
+            <li><strong>Ask price:</strong> The lowest price a seller is willing to accept right now</li>
+          </ul>
+          <p>The gap between them is the <strong>spread</strong>, and it's a real cost you pay on every trade.</p>
+
+          <svg width="100%" height="160" viewBox="0 0 500 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Bid-ask spread: you buy at the ask and sell at the bid, losing the spread each time">
+            <!-- Bid side -->
+            <rect x="30" y="30" width="140" height="70" rx="8" fill="rgba(46,170,110,0.08)" stroke="#2eaa6e" stroke-width="1.5"/>
+            <text x="100" y="55" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="600">Bid (Buy offers)</text>
+            <text x="100" y="78" text-anchor="middle" font-size="18" fill="#2eaa6e" font-weight="700">$150.00</text>
+            <text x="100" y="115" text-anchor="middle" font-size="10" fill="#a09890">You SELL at this price</text>
+
+            <!-- Spread gap -->
+            <rect x="195" y="40" width="110" height="50" rx="6" fill="rgba(212,147,13,0.1)" stroke="#d4930d" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <text x="250" y="60" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">SPREAD</text>
+            <text x="250" y="78" text-anchor="middle" font-size="14" fill="#d4930d" font-weight="700">$0.05</text>
+            <text x="250" y="115" text-anchor="middle" font-size="10" fill="#d4930d">Your hidden cost per share</text>
+
+            <!-- Ask side -->
+            <rect x="330" y="30" width="140" height="70" rx="8" fill="rgba(224,92,92,0.08)" stroke="#e05c5c" stroke-width="1.5"/>
+            <text x="400" y="55" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="600">Ask (Sell offers)</text>
+            <text x="400" y="78" text-anchor="middle" font-size="18" fill="#e05c5c" font-weight="700">$150.05</text>
+            <text x="400" y="115" text-anchor="middle" font-size="10" fill="#a09890">You BUY at this price</text>
+
+            <!-- Arrows -->
+            <path d="M170 65 L195 65" stroke="#e5e0d8" stroke-width="1.5"/>
+            <path d="M305 65 L330 65" stroke="#e5e0d8" stroke-width="1.5"/>
+
+            <!-- Bottom note -->
+            <text x="250" y="150" text-anchor="middle" font-size="11" fill="#4a4543">If you buy and immediately sell, you lose $0.05/share to the spread</text>
+          </svg>
+
+          <div class="analogy">
+            It's like a currency exchange booth at the airport. They buy your dollars at one rate and sell at a higher rate. That gap is their profit -- and your cost. The stock market works the same way.
+          </div>
+
+          <h3>When Spreads Hurt Most</h3>
+          <ul>
+            <li><strong>Popular stocks (AAPL, VOO):</strong> Spreads are tiny ($0.01-0.05) -- very cheap to trade</li>
+            <li><strong>Small or illiquid stocks:</strong> Spreads can be $0.50-2.00+ -- much more expensive</li>
+            <li><strong>Frequent trading:</strong> You pay the spread on every single trade. Trade 100 times a year and it adds up fast</li>
+          </ul>
+
+          <div class="key-point">
+            The bid-ask spread is a hidden cost baked into every trade. For popular ETFs like VOO, it's negligible. For illiquid stocks, it can be significant. Another reason to buy and hold rather than trade frequently.
+          </div>
+        </article>
+
+        <!-- KP 4: Short-Term vs Long-Term Capital Gains -->
+        <article class="kp-card" id="kp-capitalgains">
+          <h2>Capital Gains Tax: Hold Longer, Pay Less</h2>
+          <p>When you sell a stock for a profit, the US government taxes that profit. But the rate depends on <strong>how long you held it</strong>:</p>
+
+          <!-- SVG Tax Rate Comparison -->
+          <svg width="100%" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Short-term capital gains taxed up to 37%, long-term taxed at 0-20%">
+            <!-- Short-term box -->
+            <rect x="20" y="20" width="210" height="180" rx="10" fill="rgba(224,92,92,0.05)" stroke="#e05c5c" stroke-width="1.5"/>
+            <text x="125" y="48" text-anchor="middle" font-size="13" fill="#e05c5c" font-weight="700">Short-Term (held &lt; 1 year)</text>
+            <text x="125" y="72" text-anchor="middle" font-size="11" fill="#4a4543">Taxed as ordinary income:</text>
+            <!-- Tax brackets -->
+            <rect x="40" y="85" width="170" height="22" rx="4" fill="rgba(224,92,92,0.08)"/>
+            <text x="50" y="100" font-size="11" fill="#4a4543">10% bracket</text>
+            <text x="200" y="100" text-anchor="end" font-size="11" fill="#e05c5c" font-weight="600">10%</text>
+            <rect x="40" y="112" width="170" height="22" rx="4" fill="rgba(224,92,92,0.12)"/>
+            <text x="50" y="127" font-size="11" fill="#4a4543">22% bracket</text>
+            <text x="200" y="127" text-anchor="end" font-size="11" fill="#e05c5c" font-weight="600">22%</text>
+            <rect x="40" y="139" width="170" height="22" rx="4" fill="rgba(224,92,92,0.18)"/>
+            <text x="50" y="154" font-size="11" fill="#4a4543">Top bracket</text>
+            <text x="200" y="154" text-anchor="end" font-size="11" fill="#e05c5c" font-weight="700">37%</text>
+            <text x="125" y="185" text-anchor="middle" font-size="10" fill="#a09890">Same rates as your paycheck</text>
+
+            <!-- Arrow between -->
+            <text x="250" y="115" text-anchor="middle" font-size="14" fill="#a09890" font-weight="700">vs</text>
+
+            <!-- Long-term box -->
+            <rect x="270" y="20" width="210" height="180" rx="10" fill="rgba(46,170,110,0.05)" stroke="#2eaa6e" stroke-width="1.5"/>
+            <text x="375" y="48" text-anchor="middle" font-size="13" fill="#2eaa6e" font-weight="700">Long-Term (held &gt; 1 year)</text>
+            <text x="375" y="72" text-anchor="middle" font-size="11" fill="#4a4543">Special lower rates:</text>
+            <!-- Tax brackets -->
+            <rect x="290" y="85" width="170" height="22" rx="4" fill="rgba(46,170,110,0.06)"/>
+            <text x="300" y="100" font-size="11" fill="#4a4543">Low income</text>
+            <text x="450" y="100" text-anchor="end" font-size="11" fill="#2eaa6e" font-weight="700">0%</text>
+            <rect x="290" y="112" width="170" height="22" rx="4" fill="rgba(46,170,110,0.1)"/>
+            <text x="300" y="127" font-size="11" fill="#4a4543">Most people</text>
+            <text x="450" y="127" text-anchor="end" font-size="11" fill="#2eaa6e" font-weight="600">15%</text>
+            <rect x="290" y="139" width="170" height="22" rx="4" fill="rgba(46,170,110,0.14)"/>
+            <text x="300" y="154" font-size="11" fill="#4a4543">High income</text>
+            <text x="450" y="154" text-anchor="end" font-size="11" fill="#2eaa6e" font-weight="600">20%</text>
+            <text x="375" y="185" text-anchor="middle" font-size="10" fill="#a09890">Much lower than ordinary income</text>
+
+            <!-- Bottom takeaway -->
+            <text x="250" y="225" text-anchor="middle" font-size="12" fill="#d4930d" font-weight="600">Hold longer than 1 year = pay up to 17% less in tax on gains</text>
+          </svg>
+
+          <h3>Example</h3>
+          <p>You buy VOO at $500, it grows to $600. Your $100 profit is taxed as:</p>
+          <ul>
+            <li><strong>Sold after 6 months:</strong> $100 x 22% (your bracket) = <strong>$22 tax</strong></li>
+            <li><strong>Sold after 2 years:</strong> $100 x 15% (long-term rate) = <strong>$15 tax</strong></li>
+          </ul>
+          <p>Same profit. $7 less tax just for being patient.</p>
+
+          <div class="warning-box">
+            These rates are US-specific. If you invest through a Hong Kong broker, your country's tax rules apply instead. Hong Kong, for example, has no capital gains tax at all. Always check your local tax situation.
+          </div>
+
+          <div class="key-point">
+            The tax code rewards patience. Holding for more than 1 year can cut your tax rate nearly in half. This is one of the simplest, most powerful reasons to buy and hold.
+          </div>
+        </article>
+
+        <!-- KP 5: Tax-Loss Harvesting -->
+        <article class="kp-card" id="kp-taxloss">
+          <h2>Tax-Loss Harvesting: Turning Losses Into Savings</h2>
+          <p>If you sell an investment at a loss, you can use that loss to <strong>offset your gains</strong> and reduce your tax bill. This is called tax-loss harvesting.</p>
+
+          <svg width="100%" height="180" viewBox="0 0 500 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Tax-loss harvesting: $5k gain minus $3k loss equals only $2k taxed">
+            <!-- Gain box -->
+            <rect x="20" y="20" width="120" height="80" rx="8" fill="rgba(46,170,110,0.08)" stroke="#2eaa6e" stroke-width="1.5"/>
+            <text x="80" y="48" text-anchor="middle" font-size="12" fill="#2eaa6e" font-weight="600">Stock A Gain</text>
+            <text x="80" y="75" text-anchor="middle" font-size="20" fill="#2eaa6e" font-weight="700">+$5,000</text>
+
+            <!-- Plus sign -->
+            <text x="165" y="65" text-anchor="middle" font-size="20" fill="#a09890">+</text>
+
+            <!-- Loss box -->
+            <rect x="190" y="20" width="120" height="80" rx="8" fill="rgba(224,92,92,0.08)" stroke="#e05c5c" stroke-width="1.5"/>
+            <text x="250" y="48" text-anchor="middle" font-size="12" fill="#e05c5c" font-weight="600">Stock B Loss</text>
+            <text x="250" y="75" text-anchor="middle" font-size="20" fill="#e05c5c" font-weight="700">-$3,000</text>
+
+            <!-- Equals sign -->
+            <text x="335" y="65" text-anchor="middle" font-size="20" fill="#a09890">=</text>
+
+            <!-- Taxable result -->
+            <rect x="360" y="20" width="120" height="80" rx="8" fill="rgba(212,147,13,0.08)" stroke="#d4930d" stroke-width="2"/>
+            <text x="420" y="45" text-anchor="middle" font-size="11" fill="#d4930d" font-weight="600">Taxable Amount</text>
+            <text x="420" y="75" text-anchor="middle" font-size="22" fill="#d4930d" font-weight="700">$2,000</text>
+
+            <!-- Savings callout -->
+            <rect x="150" y="120" width="200" height="40" rx="6" fill="rgba(46,170,110,0.06)" stroke="#2eaa6e" stroke-width="1"/>
+            <text x="250" y="138" text-anchor="middle" font-size="11" fill="#2eaa6e" font-weight="600">Tax saved: ~$450</text>
+            <text x="250" y="153" text-anchor="middle" font-size="10" fill="#a09890">(at 15% long-term rate on $3,000)</text>
+          </svg>
+
+          <h3>The Wash Sale Rule</h3>
+          <p>There's one important catch: the <strong>wash sale rule</strong>. If you sell a stock at a loss, you can't buy the same stock (or a "substantially identical" one) within 30 days before or after the sale. If you do, the IRS disallows the loss deduction.</p>
+
+          <ul>
+            <li><strong>Allowed:</strong> Sell VOO at a loss, buy a different S&P 500 ETF (like IVV) the same day</li>
+            <li><strong>Not allowed:</strong> Sell VOO at a loss, buy VOO back the next week</li>
+          </ul>
+
+          <div class="warning-box">
+            Tax-loss harvesting is an advanced strategy. If you're a beginner buying and holding ETFs long-term, you probably won't need this for years. Focus on keeping costs low and holding long-term first.
+          </div>
+
+          <div class="key-point">
+            You can offset investment gains with investment losses to reduce taxes. But beware the wash sale rule -- wait 30 days before rebuying the same stock. This is an advanced tool, not a beginner priority.
+          </div>
+        </article>
+
+        <!-- KP 6: Cost of Frequent Trading -->
+        <article class="kp-card" id="kp-frequency">
+          <h2>The Real Cost of Frequent Trading</h2>
+          <p>Every time you trade, you pay a combination of costs:</p>
+          <ul>
+            <li><strong>Bid-ask spread</strong> (on every trade)</li>
+            <li><strong>Commissions</strong> (if your broker charges them)</li>
+            <li><strong>Tax events</strong> (short-term gains taxed at higher rates)</li>
+            <li><strong>Opportunity cost</strong> (time spent analyzing instead of compounding)</li>
+          </ul>
+
+          <!-- SVG: Trading Frequency vs Returns -->
+          <svg width="100%" height="240" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:16px 0;" role="img" aria-label="Chart showing more frequent trading correlates with lower returns">
+            <!-- Axes -->
+            <line x1="60" y1="30" x2="60" y2="190" stroke="#e5e0d8" stroke-width="1.5"/>
+            <line x1="60" y1="190" x2="460" y2="190" stroke="#e5e0d8" stroke-width="1.5"/>
+
+            <!-- Y-axis label -->
+            <text x="15" y="110" text-anchor="middle" font-size="11" fill="#a09890" transform="rotate(-90 15 110)">Annual Return</text>
+            <text x="55" y="50" text-anchor="end" font-size="10" fill="#a09890">High</text>
+            <text x="55" y="185" text-anchor="end" font-size="10" fill="#a09890">Low</text>
+
+            <!-- X-axis label -->
+            <text x="260" y="225" text-anchor="middle" font-size="11" fill="#a09890">Trading Frequency</text>
+            <text x="80" y="208" font-size="10" fill="#a09890">Rarely</text>
+            <text x="430" y="208" text-anchor="end" font-size="10" fill="#a09890">Daily</text>
+
+            <!-- Downward trend curve -->
+            <path d="M80 50 C150 55 200 80 260 110 C320 140 380 165 450 175" stroke="#e05c5c" stroke-width="2.5" fill="none"/>
+
+            <!-- Data points with labels -->
+            <circle cx="90" cy="50" r="6" fill="#2eaa6e"/>
+            <text x="90" y="40" text-anchor="middle" font-size="10" fill="#2eaa6e" font-weight="600">Buy & Hold</text>
+
+            <circle cx="180" cy="70" r="5" fill="#5b8fd9"/>
+            <text x="180" y="60" text-anchor="middle" font-size="10" fill="#5b8fd9">Quarterly</text>
+
+            <circle cx="280" cy="118" r="5" fill="#d4930d"/>
+            <text x="280" y="108" text-anchor="middle" font-size="10" fill="#d4930d">Monthly</text>
+
+            <circle cx="370" cy="155" r="5" fill="#e05c5c"/>
+            <text x="370" y="148" text-anchor="middle" font-size="10" fill="#e05c5c">Weekly</text>
+
+            <circle cx="440" cy="172" r="6" fill="#e05c5c"/>
+            <text x="440" y="165" text-anchor="middle" font-size="10" fill="#e05c5c" font-weight="600">Day Trading</text>
+
+            <!-- Vanguard quote box -->
+            <rect x="200" y="3" width="280" height="28" rx="5" fill="rgba(212,147,13,0.08)" stroke="#d4930d" stroke-width="1"/>
+            <text x="340" y="21" text-anchor="middle" font-size="10" fill="#d4930d" font-style="italic">"Vanguard's best accounts: people who forgot they had them"</text>
+          </svg>
+
+          <div class="analogy">
+            Trading is like opening the oven door while baking a cake. Each time you open it, you let heat escape and slow down the process. The best bakers (and investors) resist the urge to keep checking.
+          </div>
+
+          <h3>The Research Is Clear</h3>
+          <p>A famous study by Brad Barber and Terrance Odean analyzed 66,465 brokerage accounts. Their finding: <strong>the most active traders earned 6.5% annual return, while the market returned 17.9%</strong> during the same period. The more you trade, the more you lose to costs.</p>
+
+          <div class="key-point">
+            Study after study confirms: the more often investors trade, the worse they perform. Costs compound against you just like returns compound for you. The best strategy is almost always: buy quality, hold long-term, and stop touching it.
+          </div>
+        </article>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+          <h2>Module 6 Quiz</h2>
+          <p style="color:var(--text-dim); font-size:14px; margin-bottom:24px;">Answer all correctly to complete this module. You can retry as many times as you want.</p>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q1.</span> On $100k invested for 30 years, a 1% expense ratio vs 0.03% costs you roughly:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">About $10,000 more in fees</div>
+              <div class="quiz-option">About $50,000 more in fees</div>
+              <div class="quiz-option">~$395,000 more in fees</div>
+              <div class="quiz-option">Roughly the same amount</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q2.</span> Most US brokers now charge per trade:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">$0 — commission-free</div>
+              <div class="quiz-option">$5-10 per trade</div>
+              <div class="quiz-option">$20-30 per trade</div>
+              <div class="quiz-option">1% of trade value</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q3.</span> Holding a stock for more than 1 year means:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">You pay no tax at all</div>
+              <div class="quiz-option">You pay the lower long-term capital gains tax rate</div>
+              <div class="quiz-option">You pay higher taxes because of inflation</div>
+              <div class="quiz-option">The tax rate stays the same</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q4.</span> Tax-loss harvesting means:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">Avoiding taxes by not selling</div>
+              <div class="quiz-option">Paying taxes early for a discount</div>
+              <div class="quiz-option">Selling losers to offset gains and reduce your tax bill</div>
+              <div class="quiz-option">Harvesting dividends to pay your taxes</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-question-block">
+            <p class="quiz-q-text"><span class="quiz-q-num">Q5.</span> Studies show frequent traders generally:</p>
+            <div class="quiz-options">
+              <div class="quiz-option">Earn higher returns because they react quickly</div>
+              <div class="quiz-option">Earn lower returns than buy-and-hold investors</div>
+              <div class="quiz-option">Earn the same returns as everyone else</div>
+              <div class="quiz-option">Earn higher returns only in bull markets</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <div class="quiz-result">
+            <div class="score">0/5</div>
+            <div class="score-label">Get all 5 correct to complete this module</div>
+            <button class="retry-btn">Try Again</button>
+          </div>
+        </section>
+
+      </div><!-- /.email-gate-blur -->
+
+      <div class="email-gate-box">
+        <h3>Unlock All 8 Modules — Free</h3>
+        <p>Enter your email to continue reading. No spam, no credit card — just learning.</p>
+        <form class="email-gate-form">
+          <input type="email" placeholder="you@example.com" required>
+          <button type="submit">Unlock Free</button>
+        </form>
+        <p class="email-gate-msg"></p>
+      </div>
+    </div><!-- /.email-gate-overlay -->
+
+    <!-- Book Reference -->
+    <div class="book-ref">
+      Morgan Housel, <em>The Psychology of Money</em>: "Reasonable is more realistic and you have a better chance of sticking with it for the long run, which is what matters most when managing money." — Minimizing costs is one of the few things fully in your control.
+    </div>
+
+    <!-- Module Navigation -->
+    <div class="module-nav">
+      <a href="risk-and-diversification.html">&larr; Module 5: Risk & Diversification</a>
+      <a href="investor-psychology.html" class="nav-next">Module 7: Investor Psychology &rarr;</a>
+    </div>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2026 Stock School. Educational content only — not financial advice.</p>
+</footer>
+
+<script src="../js/shared.js"></script>
+<script>
+  // Quiz data for Module 6
+  const quizData = [
+    { answer: 2, explanation: "Over 30 years, the compounding effect of a 'small' 0.97% fee difference eats nearly $395,000 of your wealth. Expense ratios are the most important number when choosing a fund." },
+    { answer: 0, explanation: "Most major US brokers (Fidelity, Schwab, Robinhood) eliminated trading commissions. This was $30-50 per trade in the 1990s — a revolution for individual investors." },
+    { answer: 1, explanation: "Holding longer than 1 year qualifies for long-term capital gains rates (0%, 15%, or 20%), which are much lower than ordinary income tax rates (up to 37%)." },
+    { answer: 2, explanation: "Tax-loss harvesting means selling investments at a loss to offset gains and reduce your tax bill. Watch the wash sale rule: don't rebuy the same stock within 30 days." },
+    { answer: 1, explanation: "Research consistently shows frequent traders underperform buy-and-hold investors. Every trade has costs (spreads, taxes, commissions) that compound against you." }
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    StockSchool.init({
+      emailGate: true,
+      moduleId: 'm6',
+      totalKps: 6,
+      quizData: quizData
+    });
+  });
+</script>
+</body>
+</html>
