@@ -342,8 +342,20 @@ const ShareSchool = {
     let totalAnswered = 0;
     const total = inlineQuizData.length;
 
-    // 恢复已答题的状态：已 markRead 的 KP，quiz 显示为已完成
+    // 迁移：旧版通过滚动 markRead，新版通过答题 markRead
+    // 首次加载 inline quiz 时清除旧的滚动数据
     const progress = this.getProgress();
+    if (progress[moduleId] && !progress[moduleId].inlineQuiz) {
+      progress[moduleId].read = [];
+      progress[moduleId].quizPassed = false;
+      progress[moduleId].inlineQuiz = true;
+      this.saveProgress(progress);
+      this.updateUI(moduleId);
+    } else if (progress[moduleId]) {
+      progress[moduleId].inlineQuiz = true;
+      this.saveProgress(progress);
+    }
+
     const readKps = (progress[moduleId] && progress[moduleId].read) || [];
 
     inlineQuizData.forEach((q, qi) => {
