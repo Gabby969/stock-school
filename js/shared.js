@@ -33,7 +33,7 @@ const ShareSchool = {
       progress[moduleId].read.push(kpId);
     }
     this.saveProgress(progress);
-    this.updateUI();
+    this.updateUI(moduleId);
   },
 
   // Mark quiz passed
@@ -42,7 +42,7 @@ const ShareSchool = {
     if (!progress[moduleId]) progress[moduleId] = { read: [], quizPassed: false };
     progress[moduleId].quizPassed = true;
     this.saveProgress(progress);
-    this.updateUI();
+    this.updateUI(moduleId);
     this.triggerConfetti();
   },
 
@@ -65,8 +65,34 @@ const ShareSchool = {
     return { completed, total: this.MODULES.length };
   },
 
+  // Update sidebar icons to reflect read/active state
+  updateSidebar(moduleId) {
+    if (!moduleId) return;
+    const progress = this.getProgress();
+    const readKps = (progress[moduleId] && progress[moduleId].read) || [];
+    const activeItem = document.querySelector('.sidebar-item.active');
+    const activeKp = activeItem ? activeItem.dataset.kp : null;
+
+    document.querySelectorAll('.sidebar-item[data-kp]').forEach(item => {
+      const kp = item.dataset.kp;
+      const icon = item.querySelector('.sidebar-icon');
+      if (!icon) return;
+      icon.className = 'sidebar-icon';
+      if (readKps.includes(kp)) {
+        icon.classList.add('done');
+        icon.innerHTML = '&#10003;';
+      } else if (kp === activeKp) {
+        icon.classList.add('active-icon');
+        icon.innerHTML = '';
+      } else {
+        icon.classList.add('pending');
+        icon.innerHTML = '';
+      }
+    });
+  },
+
   // Update nav progress bar
-  updateUI() {
+  updateUI(moduleId) {
     const { completed, total } = this.getOverallProgress();
     const pct = Math.round((completed / total) * 100);
     const fill = document.querySelector('.nav-progress-fill');
@@ -83,6 +109,8 @@ const ShareSchool = {
       const fill = card.querySelector('.card-progress-fill');
       if (fill) fill.style.width = pctModule + '%';
     });
+
+    this.updateSidebar(moduleId || this._currentModuleId);
   },
 
   // ===== Email Gate =====
@@ -268,6 +296,7 @@ const ShareSchool = {
 
   // ===== Navigation Scroll Spy =====
   initScrollSpy(moduleId) {
+    this._currentModuleId = moduleId;
     const kpCards = document.querySelectorAll('.kp-card[id]');
     const sidebarItems = document.querySelectorAll('.sidebar-item[data-kp]');
     if (!kpCards.length || !sidebarItems.length) return;
@@ -306,10 +335,103 @@ const ShareSchool = {
     });
   },
 
+  // ===== Inline Quiz Engine =====
+  initInlineQuiz(moduleId, inlineQuizData) {
+    let firstTryCorrect = 0;
+    let totalAnswered = 0;
+    const total = inlineQuizData.length;
+
+    inlineQuizData.forEach((q, qi) => {
+      const container = document.querySelector(`.kp-check[data-kp="${q.kpId}"]`);
+      if (!container) return;
+
+      const options = container.querySelectorAll('.kp-check-opt');
+      const feedback = container.querySelector('.kp-check-feedback');
+
+      options.forEach((opt, oi) => {
+        opt.addEventListener('click', () => {
+          if (container.classList.contains('answered')) return;
+          container.classList.add('answered');
+          totalAnswered++;
+
+          const isCorrect = oi === q.answer;
+          if (isCorrect) {
+            opt.classList.add('correct');
+            firstTryCorrect++;
+            if (feedback) {
+              feedback.textContent = q.explanation || 'Correct!';
+              feedback.className = 'kp-check-feedback show correct-fb';
+            }
+          } else {
+            opt.classList.add('wrong');
+            options[q.answer].classList.add('correct');
+            if (feedback) {
+              feedback.textContent = q.explanation || 'Not quite.';
+              feedback.className = 'kp-check-feedback show wrong-fb';
+            }
+          }
+
+          // 全部答完后显示总结
+          if (totalAnswered === total) {
+            const completeSection = document.querySelector('.module-complete');
+            if (completeSection) {
+              completeSection.style.display = 'block';
+              const scoreEl = completeSection.querySelector('.complete-score');
+              if (scoreEl) scoreEl.textContent = `${firstTryCorrect}/${total} correct on first try`;
+            }
+            if (firstTryCorrect === total) {
+              this.markQuizPassed(moduleId);
+            }
+          }
+        });
+      });
+    });
+  },
+
+  // ===== Think First Component =====
+  initThinkFirst() {
+    document.querySelectorAll('.think-first').forEach(el => {
+      const btn = el.querySelector('.think-reveal');
+      const answer = el.querySelector('.think-answer');
+      if (!btn || !answer) return;
+      btn.addEventListener('click', () => {
+        answer.hidden = !answer.hidden;
+        btn.textContent = answer.hidden ? 'Tap to see the answer' : 'Hide answer';
+      });
+    });
+  },
+
+  // ===== Try It Calculator =====
+  initTryIt() {
+    document.querySelectorAll('.try-it').forEach(el => {
+      const monthlyInput = el.querySelector('.try-input');
+      const slider = el.querySelector('.try-slider');
+      const yearsSpans = el.querySelectorAll('.try-years');
+      const resultStrong = el.querySelector('.try-result-value');
+      if (!monthlyInput || !slider || !resultStrong) return;
+
+      const calculate = () => {
+        const monthly = parseFloat(monthlyInput.value) || 0;
+        const years = parseInt(slider.value) || 1;
+        yearsSpans.forEach(s => s.textContent = years);
+        // 复利公式: FV = PMT * (((1+r)^n - 1) / r)，r = 月利率, n = 总月数
+        const r = 0.10 / 12; // 10% 年化 → 月利率
+        const n = years * 12;
+        const fv = monthly * ((Math.pow(1 + r, n) - 1) / r);
+        resultStrong.textContent = '$' + Math.round(fv).toLocaleString('en-US');
+      };
+
+      monthlyInput.addEventListener('input', calculate);
+      slider.addEventListener('input', calculate);
+      calculate(); // 初始化
+    });
+  },
+
   // ===== Init =====
   init(options = {}) {
     this.initMobileNav();
-    this.updateUI();
+    this._currentModuleId = options.moduleId;
+    this.updateUI(options.moduleId);
 
     if (options.emailGate) {
       this.initEmailGate();
@@ -317,9 +439,14 @@ const ShareSchool = {
     if (options.moduleId && options.totalKps) {
       this.initScrollSpy(options.moduleId);
     }
-    if (options.moduleId && options.quizData) {
+    // 新 inline quiz 优先，旧 quiz 作为 fallback
+    if (options.moduleId && options.inlineQuizData) {
+      this.initInlineQuiz(options.moduleId, options.inlineQuizData);
+    } else if (options.moduleId && options.quizData) {
       this.initQuiz(options.moduleId, options.quizData);
     }
+    this.initThinkFirst();
+    this.initTryIt();
   }
 };
 
