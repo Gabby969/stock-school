@@ -368,6 +368,8 @@ img { max-width: 100%; height: auto; }
   display: flex;
   gap: 0;
   min-height: calc(100vh - 56px);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Sidebar */
@@ -427,7 +429,6 @@ img { max-width: 100%; height: auto; }
 /* Module Content Area */
 .module-content {
   flex: 1;
-  max-width: 880px;
   padding: 40px 48px;
 }
 .module-content h1 {
