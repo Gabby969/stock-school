@@ -467,13 +467,13 @@ img { max-width: 100%; height: auto; }
   margin: 20px 0 8px;
 }
 .kp-card p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 12px;
 }
 .kp-card ul, .kp-card ol {
   margin: 8px 0 12px 20px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -581,7 +581,7 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   transition: all var(--transition);
   color: var(--text);
 }
@@ -678,7 +678,7 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   transition: all var(--transition);
   color: var(--text);
   text-align: left;

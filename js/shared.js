@@ -308,7 +308,8 @@ const ShareSchool = {
           sidebarItems.forEach(item => {
             item.classList.toggle('active', item.dataset.kp === id);
           });
-          this.markRead(moduleId, id);
+          // 只更新侧边栏高亮，不 markRead——打勾由答对 quiz 触发
+          this.updateSidebar(moduleId);
         }
       });
     }, { rootMargin: '-20% 0px -60% 0px' });
@@ -341,12 +342,29 @@ const ShareSchool = {
     let totalAnswered = 0;
     const total = inlineQuizData.length;
 
+    // 恢复已答题的状态：已 markRead 的 KP，quiz 显示为已完成
+    const progress = this.getProgress();
+    const readKps = (progress[moduleId] && progress[moduleId].read) || [];
+
     inlineQuizData.forEach((q, qi) => {
       const container = document.querySelector(`.kp-check[data-kp="${q.kpId}"]`);
       if (!container) return;
 
       const options = container.querySelectorAll('.kp-check-opt');
       const feedback = container.querySelector('.kp-check-feedback');
+
+      // 如果这个 KP 已经在上次答过，标记为已完成
+      if (readKps.includes(q.kpId)) {
+        container.classList.add('answered');
+        options[q.answer].classList.add('correct');
+        totalAnswered++;
+        firstTryCorrect++; // 宽松处理：恢复时算首次正确
+        if (feedback) {
+          feedback.textContent = q.explanation || 'Correct!';
+          feedback.className = 'kp-check-feedback show correct-fb';
+        }
+        return; // 跳过事件绑定
+      }
 
       options.forEach((opt, oi) => {
         opt.addEventListener('click', () => {
@@ -358,6 +376,8 @@ const ShareSchool = {
           if (isCorrect) {
             opt.classList.add('correct');
             firstTryCorrect++;
+            // 答对才打勾——这是成就感的来源
+            this.markRead(moduleId, q.kpId);
             if (feedback) {
               feedback.textContent = q.explanation || 'Correct!';
               feedback.className = 'kp-check-feedback show correct-fb';
@@ -365,6 +385,8 @@ const ShareSchool = {
           } else {
             opt.classList.add('wrong');
             options[q.answer].classList.add('correct');
+            // 答错也 markRead——看到解释后也算学到了
+            this.markRead(moduleId, q.kpId);
             if (feedback) {
               feedback.textContent = q.explanation || 'Not quite.';
               feedback.className = 'kp-check-feedback show wrong-fb';
