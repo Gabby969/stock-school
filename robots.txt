@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stockschool.site/sitemap.xml
+Sitemap: https://shareschool.site/sitemap.xml

@@ -1,7 +1,7 @@
-/* ===== Stock School — Shared Functionality ===== */
+/* ===== ShareSchool — Shared Functionality ===== */
 
 // ===== Progress Tracking =====
-const StockSchool = {
+const ShareSchool = {
   MODULES: [
     { id: 'm1', title: 'What Is the Stock Market?', url: '/modules/what-is-the-stock-market.html', free: true },
     { id: 'm2', title: 'Key Metrics', url: '/modules/key-metrics.html', free: true },
@@ -16,13 +16,13 @@ const StockSchool = {
   // Get progress from localStorage
   getProgress() {
     try {
-      return JSON.parse(localStorage.getItem('stockschool_progress') || '{}');
+      return JSON.parse(localStorage.getItem('shareschool_progress') || '{}');
     } catch { return {}; }
   },
 
   // Save progress
   saveProgress(progress) {
-    localStorage.setItem('stockschool_progress', JSON.stringify(progress));
+    localStorage.setItem('shareschool_progress', JSON.stringify(progress));
   },
 
   // Mark knowledge point as read
@@ -87,11 +87,11 @@ const StockSchool = {
 
   // ===== Email Gate =====
   isUnlocked() {
-    return localStorage.getItem('stockschool_unlocked') === 'true';
+    return localStorage.getItem('shareschool_unlocked') === 'true';
   },
 
   unlock() {
-    localStorage.setItem('stockschool_unlocked', 'true');
+    localStorage.setItem('shareschool_unlocked', 'true');
   },
 
   initEmailGate() {
@@ -116,7 +116,7 @@ const StockSchool = {
         fetch(`https://formspree.io/f/${formId}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, source: 'stockschool_unlock' })
+          body: JSON.stringify({ email, source: 'shareschool_unlock' })
         }).then(() => {
           this.unlock();
           const msg = form.parentElement.querySelector('.email-gate-msg');
@@ -325,6 +325,6 @@ const StockSchool = {
 
 // Auto-init on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-  StockSchool.initMobileNav();
-  StockSchool.updateUI();
+  ShareSchool.initMobileNav();
+  ShareSchool.updateUI();
 });
